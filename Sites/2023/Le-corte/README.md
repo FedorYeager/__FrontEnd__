@@ -5,5 +5,5 @@
 - CSS 3 / SCSS
 - ADAPTIVE
 
-## Link:
-Can you view [my project](https://FedorYeager.github.io/Le-corte/)
+## Website Launch
+You can clone the repository and open index.html

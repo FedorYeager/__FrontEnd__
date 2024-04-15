@@ -7,5 +7,5 @@
 - ADAPTIVE
 - Schema.org
 
-## Link:
-Can you view [my project](https://FedorYeager.github.io/Createx/)
+## Website Launch
+You can clone the repository and open index.html
