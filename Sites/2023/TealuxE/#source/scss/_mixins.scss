@@ -1,0 +1,12 @@
+@mixin font($ff, $src, $fw, $fs, $fd){
+  font-family: $ff;
+  src: $src;
+  font-weight: $fw;
+  font-style: $fs;
+  font-display: $fd;
+}
+
+@mixin text($fz, $lh){
+  font-size: $fz;
+  line-height: $lh;
+}

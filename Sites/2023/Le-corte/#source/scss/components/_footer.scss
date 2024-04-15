@@ -1,0 +1,126 @@
+.footer {
+  background: $back-btn;
+}
+.footer__inner {
+  padding: 70px 0 ;
+}
+.footer__nav-list {
+  @extend %flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.5;
+  border-top: 1px solid #fff;
+}
+.footer__list-item {
+  @extend %hover-link;
+  &:first-child{
+    padding-left: 0;
+  }
+  &:last-child{
+    padding-right: 0;
+  }
+}
+.footer__contacts {
+  border: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+}
+.footer__contacts-list {
+  @extend %flex;
+  @include text(14px, 600, 1.5, none, none);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.footer__contacts-item {
+  &:nth-child(2){
+    margin-left: -40px;
+  }
+  border-right: 1px solid #fff;
+  padding: 20px 55px;
+  @extend %hover-link;
+  &:last-child{
+    border-left: 1px solid #fff;
+    border-right: none;
+    padding-right: 40px;
+  }
+  &:first-child{
+    padding-left: 40px;
+  }
+}
+.footer__socials {
+  @extend %flex;
+  padding: 0px 57px ;
+}
+.footer__socials-item {
+  margin-right: 35px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+// ===================== 1130 =====================
+@media (max-width: 1130px){
+  .footer__contacts-item {
+    &:nth-child(2){
+      margin-left: 0;
+    }
+  }
+}
+// ===================== 1025 =====================
+@media (max-width: 1025px){
+  .footer__contacts-item{
+    padding: 20px 30px;
+  }
+}
+// ===================== 925 =====================
+@media (max-width: 925px){
+  .footer__inner{
+    padding: 55px 0;
+  }
+  .footer__nav-list{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-top: none;
+  }
+  .footer__nav{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .footer__contacts{
+    padding-top: 35px;
+    border: none;
+  }
+  .footer__contacts-list{
+    flex-direction: column;
+  }
+  .footer__contacts-item {
+    margin-bottom: 20px;
+    &:nth-child(2){
+      margin-left: 0;
+    }
+    border-right: none;
+    padding: 0;
+    @extend %hover-link;
+    &:last-child{
+      border-left: none;
+      border-right: none;
+      padding-right: 0;
+    }
+    &:first-child{
+      padding-left: 0;
+    }
+  }
+  .footer__socials {
+    padding: 0px 57px 15px ;
+  }
+}
+// ===================== 595 =====================
+@media (max-width: 595px){
+  .footer__inner{
+    padding: 35px 0px ;
+  }
+}

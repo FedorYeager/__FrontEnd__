@@ -1,0 +1,65 @@
+.wrapper{
+  min-height: 100%;
+  background-color: $black;
+  overflow: hidden;
+  width: 100%;
+}
+.container{
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+input{
+  background-color: hsl(0, 0%, 100%, .0);
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  width: 255px;
+}
+input::placeholder{
+  color: #fff;
+  font-size: 13px;
+}
+input[type="text"] {
+  color: #fff;
+}
+input[type="tel"] {
+  color: #fff;
+}
+.btn{
+  @include text(16px, 500, normal, none, 0);
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.8px;
+  padding: 15px 30px;
+  background: $back-btn;
+  white-space: nowrap;
+  transition: .2s;
+  &:hover{
+    background: $hover-back-btn;
+    transition: .2s;
+    border-radius: 15px;
+  }
+}
+.heading{
+  @include text(36px, 700, 1.5, none, 0px);
+  font-family: 'Playfair Display';
+}
+@media (max-width: 540px){
+  .heading{
+    font-size: 28px;
+  }
+}
+@media (max-width: 535px){
+  .heading{
+    font-size: 24px;
+  }
+}

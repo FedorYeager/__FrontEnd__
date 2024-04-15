@@ -1,0 +1,116 @@
+.main-blog {
+  padding: 150px 0;
+}
+.main-blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 58px;
+}
+.main-blog__item {
+  flex-basis: 542px;
+  display: flex;
+  gap: 0 20px;
+}
+.main-blog__item-content {
+  @extend %column;
+}
+.main-blog__item-title {
+  font-family: 'cormorant regular';
+  @include text(24px, normal);
+  min-height: 86px;
+}
+.main-blog__item-author {
+  @include text(13px, normal);
+}
+.main-blog__item-link {
+  @include text(13px, normal);
+  margin-top: auto;
+  position: relative;
+}
+.main-blog__item-link::after {
+  @extend %element;
+  background-image: url('../img/icons/arrow.svg');
+  height: 10px;
+  width: 5px;
+  margin-left: 8px;
+  transform: translateY(50%);
+}
+.menu-blog__link {
+  display: flex;
+  justify-content: center;
+  padding: 12px 41px;
+  margin: 60px auto 0;
+  border: 1px solid $main-color;
+  width: 150px;
+}
+
+
+
+@media (max-width: 1000px){
+  .main-blog {
+    padding: 120px 0;
+  }
+  .main-blog__item-img {
+    max-width: 230px;
+  }
+  .main-blog__item {
+    flex-basis: 460px;
+  }
+  .main-blog__list{
+    gap: 67px 20px;
+  }
+}
+@media (max-width: 768px){
+  .main-blog__item-img {
+    max-width: 270px;
+  }
+  .main-blog__item {
+    flex-basis: 542px;
+  }
+  .main-blog__list{
+    gap: 30px 20px;
+  }
+  .main-blog__item:nth-child(even) {
+    margin-left: 98px;
+  }
+}
+@media (max-width: 680px){
+  .main-blog__item:nth-child(even) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px){
+  .main-blog{
+    padding: 60px 0;
+  }
+  .main-blog__item-img {
+    max-width: 230px;
+  }
+  .main-blog__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-blog__item-title{
+    min-height: 0;
+    margin: 10px auto 5px;
+    max-width: 230px;
+  }
+  .main-blog__item-author{
+    margin-bottom: 10px;
+  }
+  .menu-blog__link{
+    margin-top: 30px;
+  }
+}
+@media (max-width: 360px){
+  .main-blog{
+    padding: 50px 0;
+  }
+  .main-blog__item-img {
+    max-width: 100%;
+  }
+  .main-blog__item:last-child,
+  .main-blog__item:nth-last-child(2){
+    display: none;
+  }
+}

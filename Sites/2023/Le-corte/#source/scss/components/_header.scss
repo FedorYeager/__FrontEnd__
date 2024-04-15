@@ -1,0 +1,119 @@
+.header {
+  background: url('../images/bgc.jpg') 30% 0 / cover no-repeat;
+  height: 100vh;
+}
+.header__info {
+  @extend %flex, %hover-link; 
+  div{
+    @include text(13px, 500, 1.5, none, 33px);
+    margin-top: 30px;
+  }
+}
+.header__nav-list{
+  @extend %flex; 
+  justify-content: space-around;
+  @include text(14px, 400, 1.5, none, 215px);
+}
+.header__list-item{
+  border: 1px solid #fff;
+  padding: 11px 110px 11px 110px;
+  @extend %hover-link;
+  &:first-child{
+    border-left: none;
+  }
+  &:last-child{
+    border-right: none;
+  }
+}
+.header__heading{
+  font-size: 110px;
+  font-family: 'Playfair Display';
+  margin-bottom: 320px;
+  margin-left: 30%;
+  transform: translateX(10%);
+  text-shadow: 0px 0px 30px #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  & br{
+    display: none;
+  }
+}
+.header__button-box {
+  display: flex;
+  justify-content: center;
+  transform: translateX(10%);
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.header__button{
+  margin-right: 90px;
+}
+.header__burger-wrapper{
+  display: none;
+}
+.popup{
+  display: none;
+}
+.popup-link{
+  display: none;
+}
+// ===================== 1170 =====================
+@media (max-width: 1170px){
+  .header__nav-list{
+    display: none;
+  }
+  .header__burger-wrapper{
+    display: block;
+  }
+  .header__info{
+    margin-bottom: 200px;
+  }
+  .header__heading{
+    word-break: break-all;
+    margin-left: 0;
+    transform: translateX(0%);
+    max-width: 100px;
+    margin-bottom: 270px;
+    & br{
+      display: block;
+    }
+  }
+  .header__button-box {
+    transform: translateX(15%);
+  }
+}
+// ===================== 900 =====================
+@media (max-width: 900px){
+  .header__heading{
+    font-size: 90px;
+    margin-bottom: 350px;
+  }
+}
+// ===================== 750 =====================
+@media (max-width: 750px){
+  .header__burger-wrapper{
+    display: none;
+  }
+  .header__info{
+    display: none;
+  }
+  .header__heading{
+    padding-top: 400px;
+  }
+  .header__button-box{
+    display: none;
+  }
+  .popup{
+    display: block;
+  }
+  .popup-link{
+    display: block;
+  }
+}
+// ===================== 365 =====================
+@media (max-width: 365px){
+    .header__heading{
+    font-size: 75px;
+  }
+}

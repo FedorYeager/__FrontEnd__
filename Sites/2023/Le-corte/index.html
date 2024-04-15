@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Шаталов Фёдор">
+  <title>Le-corte</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="popup-link" href="#popup">МЕНЮ</a>
+      <div id="anchor" class="popup__anchor"></div>
+      <!-- ? POPUP -->
+      <div id="popup" class="popup">
+        <a href="#ancher" class="popup__area"></a>
+        <div class="popup__body">
+          <div class="popup__content">
+            <a href="#anchor" class="popup__close">X</a>
+            <h2 class="popup__title">МенЮ</h2>
+            <nav>
+              <ul class="popup__nav-list">
+                <li class="popup__list-item"><a>Каталог</a></li>
+                <li class="popup__list-item"><a>Доставка</a></li>
+                <li class="popup__list-item"><a>Коллекции</a></li>
+                <li class="popup__list-item"><a>Контакты</a></li>
+              </ul>
+            </nav>
+            <a class="popup__button btn">винная карта</a>
+            <a class="popup__button btn">дегустация</a>
+            <address class="popup__info">
+              <div>Новокузнечный переулок 4/1</div>
+              <div><a href="tel:+88121234567">8 (812) 123-45-67</a></div>
+            </address>
+          </div>
+        </div>
+      </div>
+      <!-- ? POPUP -->
+      <!-- ! === BURGER  === -->
+      <div class="header__burger-wrapper">
+        <input type="checkbox" id="header__check-menu">
+        <label class="header__lable" for="header__check-menu">МенЮ</label>
+        <div class="header__burger-line header__burger-line--first"></div>
+        <div class="header__burger-line header__burger-line--second"></div>
+        <div class="header__burger-line header__burger-line--third"></div>
+        <div class="header__burger-line header__burger-line--fourth"></div>
+        <nav class="header__main-menu">
+          <a class="header__burger-link" href="#!">Каталог</a>
+          <a class="header__burger-link" href="#!">Доставка</a>
+          <a class="header__burger-link" href="#!">Коллекции</a>
+          <a class="header__burger-link" href="#!">Контакты</a>
+        </nav>
+      </div>
+      <!-- ! === BURGER  == -->
+      <div class="container">
+        <address class="header__info">
+          <div>Новокузнечный переулок 4/1</div>
+          <div><a href="tel:+88121234567">8 (812) 123-45-67</a></div>
+        </address>
+        <nav>
+          <ul class="header__nav-list">
+            <li class="header__list-item"><a href="#!">Каталог</a></li>
+            <li class="header__list-item"><a href="#!">Доставка</a></li>
+            <li class="header__list-item"><a href="#!">Коллекции</a></li>
+            <li class="header__list-item"><a href="#!">Контакты</a></li>
+          </ul>
+        </nav>
+        <h1 class="header__heading">lE <br> CoRte</h1>
+        <ul class="header__button-box">
+          <li><a class="header__button btn">винная карта</a></li>
+          <li><a class="header__button btn">дегустация</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="about">
+      <div class="container">
+        <div class="about__content">
+          <h2 class="about__heading heading">Лучший вкус, это вкус долголетнего вина</h2>
+          <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id
+            imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing 
+            morbi sodales ac. Mauris dictumst risus pulvinar blandit elit. Vestibulum quam ultrices 
+            nascetur et viverra suscipit. Proin vitae aliquet leo aliquam amet rutrum. Lectus auctor 
+            purus ultrices enim ultrices. Augue fringilla tellus tortor orci ultrices sed. Viverra cras sapien, 
+            pellentesque viverra malesuada. Tellus dolor, eget vitae dignissim molestie eget sit duis. 
+            Vitae dui vel pretium euismod diam. Pellentesque amet, lacus, amet, quis risus. 
+            Pellentesque scelerisque nunc, orci aliquam quis.</p>
+          </div>
+      </div>
+    </section>
+    <section class="harvest">
+      <div class="container">
+        <div class="harvest__inner">
+          <div class="harvest__content">
+            <h3 class="harvest__subtitle">Новинки коллекций</h3>
+            <h2 class="harvest__heading heading">Март 1980
+              Урожай Марселя</h2>
+            <p class="harvest__paragraph harvest__paragraph--top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi sodales ac. </p>
+            <div class="harvest__rows">
+              <div class="harvest__row">
+                <div class="harvest__row-numbers">1980</div>
+                <div class="harvest__row-info">
+                  <div class="harvest__row-title">Colli Euganei Bianco Ca' Lustra 1980</div>
+                  <div class="harvest__row-text">Красочная бутылка вина из Марселя</div>
+                </div>
+              </div>
+              <div class="harvest__row">
+                <div class="harvest__row-numbers">1980</div>
+                <div class="harvest__row-info">
+                  <div class="harvest__row-title">Colli Euganei Bianco Ca' Lustra 1980</div>
+                  <div class="harvest__row-text">Красочная бутылка вина из Марселя</div>
+                </div>
+              </div>
+              <div class="harvest__row">
+                <div class="harvest__row-numbers">1980</div>
+                <div class="harvest__row-info">
+                  <div class="harvest__row-title">Colli Euganei Bianco Ca' Lustra 1980</div>
+                  <div class="harvest__row-text">Красочная бутылка вина из Марселя</div>
+                </div>
+              </div>
+            </div>
+            <p class="harvest__paragraph harvest__paragraph--bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi sodales ac. </p>
+            <a class="harvest__button btn">узнать подробнее</a>
+          </div>
+          <div class="harvest__images-box">
+            <img class="harvest__image harvest__image--1" src="./images/harvest/1.jpg" alt="">
+            <div class="harvest__image-row">
+              <img class="harvest__image harvest__image--2" src="./images/harvest/2.jpg" alt="">
+              <img class="harvest__image harvest__image--3" src="./images/harvest/3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <div class="container">
+        <div class="form__inner">
+          <div class="form__content">
+            <h2 class="form__heading heading">Запись на дегустацию</h2>
+            <p class="form__parapraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. </p>
+            <div action="" class="form__form">
+          </div>
+            <lable class="form__lable">
+              <div class="form__row">
+                <input class="form__input form__input--name" type="text" placeholder="Имя" required>
+                <input class="form__input form__input--tel" type="tel" placeholder="Телефон" required>
+              </div>
+              <input class="form__input form__input--add" type="text" placeholder="Бутик на Невском 103" required>
+              <button class="form__button">запиСатЬся</button>
+            </lable>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Главная</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Каталог</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Поставщики</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Коллекции</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Дегустация</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Коллекция 2020</a></li>
+              <li class="footer__list-item"><a href="#!" class="footer__nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer__contacts">
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item"><a href="#!" class="footer__contacts-link">винный бутик LE CORTE</a></li>
+              <li class="footer__contacts-item"><a class="footer__contacts-link" href="tel:+88121234567">8 (812) 123-45-67</a></li>
+              <ul class="footer__socials">
+                <li class="footer__socials-item"><a href="#!" class="footer__socials-link">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.8956 7.52385C23.7662 7.04288 23.5126 6.60435 23.1604 6.25215C22.8082 5.89995 22.3697 5.64643 21.8888 5.51697C20.1175 5.0376 13 5.0376 13 5.0376C13 5.0376 5.8825 5.0376 4.11125 5.51697C3.63028 5.64643 3.19175 5.89995 2.83955 6.25215C2.48735 6.60435 2.23384 7.04288 2.10438 7.52385C1.77364 9.33025 1.61315 11.1637 1.625 13.0001C1.61315 14.8365 1.77364 16.6699 2.10438 18.4763C2.23384 18.9573 2.48735 19.3958 2.83955 19.748C3.19175 20.1002 3.63028 20.3538 4.11125 20.4832C5.8825 20.9626 13 20.9626 13 20.9626C13 20.9626 20.1175 20.9626 21.8888 20.4832C22.3697 20.3538 22.8082 20.1002 23.1604 19.748C23.5126 19.3958 23.7662 18.9573 23.8956 18.4763C24.2264 16.6699 24.3869 14.8365 24.375 13.0001C24.3869 11.1637 24.2264 9.33025 23.8956 7.52385ZM10.725 16.4126V9.5876L16.6319 13.0001L10.725 16.4126Z" fill="white"/>
+                  </svg>
+                </a></li>
+                <li class="footer__socials-item"><a href="#!" class="footer__socials-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3014_34)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3624 14.7577C21.3624 14.7577 23.3028 16.6741 23.7828 17.5609C23.7921 17.5736 23.7994 17.5878 23.8044 17.6029C24 17.9305 24.048 18.1873 23.952 18.3769C23.79 18.6901 23.2416 18.8473 23.0556 18.8605H19.626C19.3872 18.8605 18.8904 18.7981 18.2856 18.3805C17.8236 18.0577 17.364 17.5261 16.9188 17.0065C16.254 16.2349 15.6792 15.5653 15.0972 15.5653C15.0237 15.5651 14.9507 15.5773 14.8812 15.6013C14.4408 15.7405 13.8816 16.3681 13.8816 18.0397C13.8816 18.5629 13.4688 18.8605 13.1796 18.8605H11.6088C11.0736 18.8605 8.28719 18.6733 5.81639 16.0681C2.78879 12.8785 0.069586 6.48005 0.043186 6.42365C-0.126014 6.00965 0.229186 5.78405 0.613186 5.78405H4.07639C4.54079 5.78405 4.69199 6.06485 4.79759 6.31685C4.91999 6.60605 5.37359 7.76285 6.11759 9.06245C7.32239 11.1768 8.06279 12.0373 8.65439 12.0373C8.76553 12.0376 8.8748 12.0086 8.97119 11.9533C9.74399 11.5285 9.59999 8.76845 9.56399 8.19965C9.56399 8.08925 9.56279 6.96725 9.16679 6.42485C8.88359 6.03605 8.40119 5.88485 8.10959 5.82965C8.18759 5.71685 8.35319 5.54405 8.56559 5.44205C9.09479 5.17805 10.0512 5.13965 11.0004 5.13965H11.5272C12.5568 5.15405 12.8232 5.22005 13.1976 5.31485C13.9512 5.49485 13.9656 5.98325 13.8996 7.64645C13.8804 8.12165 13.86 8.65685 13.86 9.28685C13.86 9.42125 13.854 9.57125 13.854 9.72365C13.8312 10.5768 13.8012 11.5381 14.4036 11.9329C14.4817 11.9815 14.5719 12.0073 14.664 12.0072C14.8728 12.0072 15.498 12.0072 17.1936 9.09725C17.9376 7.81205 18.5136 6.29645 18.5532 6.18245C18.5868 6.11885 18.6876 5.94005 18.81 5.86805C18.8971 5.82172 18.9946 5.79858 19.0932 5.80085H23.1672C23.6112 5.80085 23.9124 5.86805 23.9712 6.03605C24.0696 6.30845 23.952 7.14005 22.092 9.65525C21.7788 10.074 21.504 10.4365 21.2628 10.7533C19.5768 12.9661 19.5768 13.0777 21.3624 14.7577Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3014_34">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </a></li>
+                <li class="footer__socials-item"><a href="#!" class="footer__socials-link">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5134 22.7469V13.8679H17.5088L17.9541 10.3915H14.5134V8.17718C14.5134 7.17402 14.7929 6.48718 16.2327 6.48718H18.057V3.38777C17.1694 3.29264 16.2771 3.24671 15.3844 3.25018C12.7367 3.25018 10.9189 4.86652 10.9189 7.83377V10.385H7.94299V13.8614H10.9254V22.7469H14.5134Z" fill="white"/>
+                  </svg>
+                </a></li>
+              </ul>
+              <li class="footer__contacts-item"><a href="#!" class="footer__contacts-link">© le-corte.ru</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

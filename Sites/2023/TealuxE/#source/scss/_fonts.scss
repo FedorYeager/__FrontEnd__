@@ -1,0 +1,18 @@
+@font-face {
+  @include font('open sans light', url('./../fonts/opensans-light.woff2'), 300, normal, swap);
+}
+@font-face {
+  @include font('open sans light-italic', url('./../fonts/opensans-lightitalic.woff2'), 300, italic, swap);
+}
+@font-face {
+  @include font('open sans regular', url('./../fonts/opensans-regular.woff2'), normal, normal, swap);
+}
+@font-face {
+  @include font('open sans semibold', url('./../fonts/opensans-semibold.woff2'), 600, normal, swap);
+}
+@font-face {
+  @include font('cormorant light-italic', url('./../fonts/cormorant-lightitalic.woff'), 300, italic, swap);
+}
+@font-face {
+  @include font('cormorant regular', url('./../fonts/cormorant-regular.woff2'), normal, normal, swap);
+}

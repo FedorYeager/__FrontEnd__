@@ -1,0 +1,131 @@
+.mailing-list {
+  padding: 100px 0;
+  background-color: $background-color;
+  background-image: url('../img/mailing-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.mailing-list__title {
+  text-align: left;
+  margin-bottom: 50px;
+}
+.mailing-list__inner {
+  display: flex;
+  align-items: center;
+  gap: 60px 40px;
+}
+.mailing-list__text {
+  flex-basis: 580px;
+}
+.mailing-list__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 580px;
+}
+.mailing-list__email {
+  border: none;
+  border-bottom: 1px solid $form-color;
+  background-color: transparent;
+  padding: 3px 15px;
+  width: 438px;
+  margin-right: 25px;
+  font-family: 'open sans light';
+  @include text(20px, 1.5);
+  color: $main-color;
+}
+.mailing-list__email::placeholder{
+  font-family: 'open sans light';
+  @include text(20px, 1.5);
+  color: $form-color;
+}
+.mailing-list__btn {
+  font-family: 'open sans light';
+  @include text(20px, normal);
+  background-color: #fff;
+  color: $main-color;
+  border: 1px solid $main-color;
+  padding: 12px 41px;
+}
+label{
+  margin-top: 16px;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  padding-left: 20px;
+}
+.checkbox-style {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $main-color;
+  background-color: #fff;
+  transform: translateY(50%);
+}
+.checkbox:checked + .checkbox-style::before{
+  @extend %element;
+  width: 6px;
+  height: 6px;
+  background-color: $main-color;
+  top: 1px;
+  right: 1px;
+}
+.checkbox__text {
+  @include text(13px, normal);
+  padding-left: 20px;
+}
+
+
+
+@media (max-width: 1000px){
+  .mailing-list{
+    padding: 60px 0;
+  }
+  .mailing-list__inner{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mailing-list__title {
+    text-align: center;
+  }
+  .mailing-list__text {
+    text-align: center;
+    flex-basis: 780px;
+  }
+}
+@media (max-width: 768px){
+  .mailing-list__text {
+    flex-basis: 640px;
+  }
+}
+@media (max-width: 480px){
+  .mailing-list{
+    padding:50px 0;
+  }
+  .mailing-list__text {
+    font-size: 13px;
+    flex-basis: 460px;
+  }
+  .mailing-list__inner{
+    gap: 30px 0;
+  }
+  .mailing-list__email{
+    width: 324px;
+    margin-right: 20px;
+  }
+  .mailing-list__btn{
+    padding: 10px 39px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 360px){
+  .mailing-list__email{
+    width: 100%;
+  }
+  .mailing-list__btn{
+    margin: 10px auto 0;
+  }
+}

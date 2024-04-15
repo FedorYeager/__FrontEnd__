@@ -1,0 +1,21 @@
+%between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%al-center{
+  display: flex;
+  align-items: center;
+}
+
+%column{
+  display: flex;
+  flex-direction: column;
+}
+
+%element{
+  content: '';
+  display:inline-block;
+  position: absolute;
+}

@@ -1,0 +1,5 @@
+@mixin element ($bg, $mw, $hg){
+  background: $bg;
+  max-width: $mw;
+  height: $hg;
+}

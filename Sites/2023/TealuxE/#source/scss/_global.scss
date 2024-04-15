@@ -1,0 +1,31 @@
+body{
+  font-family: 'open sans light';
+  color: $main-color;
+  @include text(20px, 1.5);
+  position: relative;
+}
+.wrapper{
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.container{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 20px ;
+}
+.title{
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: 'cormorant regular';
+  @include text(40px, normal);
+}
+@media (max-width: 360px){
+  .title{
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+}
+// .reviews__item.reviews__item--hide{
+//   display: none;
+// }

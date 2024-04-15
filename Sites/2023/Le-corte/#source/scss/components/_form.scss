@@ -1,0 +1,200 @@
+.form {
+  margin: 100px 0;
+  position: relative;
+  &::before{
+    @extend %element;
+    @include element(url('../images/decor/grape.svg') 0 0 / cover no-repeat, 260px, 260px);
+    left: 10%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  &::after{
+    @extend %element;
+    @include element(url('../images/decor/barrel.svg') 0 0 / cover no-repeat, 260px, 260px);
+    left: 71%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+.form__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 285px 95px;
+  border: 3px solid $border;
+}
+.form__heading {
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateX(-37.5%);
+  white-space: nowrap;
+  margin-bottom: 80px;
+  position: relative;
+  &::before{
+    @extend %element;
+    @include element(#fff, 120px, 1px);
+    transform: translateX(-100%);
+    left: 50%;
+    top: 100px;
+    right: 0;
+  }
+}
+.form__parapraph {
+  margin-bottom: 80px;
+  text-align: center;
+  line-height: 1.5;
+}
+.form__row{
+  @extend %flex;
+  margin-bottom: 50px;
+}
+.form__input--name{
+  margin-right: 30px;
+}
+.form__input--add{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 75px;
+  width: 540px;
+}
+.form__button {
+  @include text(16px, 500, normal, none, none);
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .8px;
+  padding: 15px 30px ;
+  border: 1px solid #fff;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  transition: .3s all;
+  &:hover{
+    border: 1px solid $back-btn;
+    color: $back-btn;
+    transition: .3s all;
+  }
+}
+// ===================== 1380 =====================
+@media (max-width: 1380px){
+  .form {
+    &::before{
+      width: 200px;
+      height: 200px;
+      left: 3%;
+    }
+    &::after{
+      width: 200px;
+      height: 200px;
+      left: 80%;
+    }
+  }
+}
+// ===================== 1170 =====================
+@media (max-width: 1170px){
+  .form {
+    &::before{
+      width: 150px;
+      height: 150px;
+      left: 1%;
+    }
+    &::after{
+      width: 150px;
+      height: 150px;
+      left: 85%;
+    }
+  }
+}
+// ===================== 1030 =====================
+@media (max-width: 1030px){
+  .form {
+    &::after{
+      display: none;
+    }
+  }
+}
+// ===================== 830 =====================
+@media (max-width: 830px){
+  .form {
+    &::before{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+// ===================== 640 =====================
+@media (max-width: 640px){
+  .form {
+    &::before{
+      display: none;
+    }
+  }
+  .form__inner{
+    padding-top: 30px;
+  }
+}
+// ===================== 600 =====================
+@media (max-width: 600px){
+  .form{
+    margin: 20px 0 30px;
+  }
+  .form__inner {
+    border: none;
+    padding-bottom: 25px;
+  }
+  .form__heading{
+    left: 25%;
+  }
+  .form__parapraph{
+    max-width: 450px;
+    text-align: left;
+  }
+  .form__button {
+    width: 75%;
+  }
+  .form__row{
+    @extend %flex;
+    flex-direction: column;
+  }
+  .form__row{
+    margin: 0;
+  }
+  .form__input--name, .form__input--tel{
+    margin: 0 0 30px 0;
+  }
+  .form__input--add{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 75px;
+    width: 255px;
+  }
+  .form__lable{
+    display: inline-block;
+    border: 3px solid $border;
+    padding: 30px;
+  }
+}
+// ===================== 545 =====================
+@media (max-width: 545px){
+  .form__inner{
+    align-items: start;
+    transform: translateX(-50%);
+  }
+  .form__heading{
+    left: 50%;
+      &::before{
+    transform: translateX(-75%);
+    top: 65px;
+  }
+  }
+}
+// ===================== 350 =====================
+@media (max-width: 350px){
+  .form__lable{
+    padding: 15px;
+  }
+}

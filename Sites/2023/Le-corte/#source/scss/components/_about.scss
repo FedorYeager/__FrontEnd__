@@ -1,0 +1,106 @@
+.about {
+  background-color: $black;
+  margin: 100px 0 ;
+}
+.about__content{
+  border: 3px solid $border;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 60px 190px 270px;
+}
+.about__heading {
+  margin-bottom: 80px;
+  position: relative;
+  &::after{
+    @extend %element;
+    @include element(#fff, 160px, 1px);
+    bottom: -40px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.about__paragraph {
+  position: relative;
+  &::after{
+    @extend %element;
+    @include element( url('../images/decor/glass.svg') 0 0 / cover no-repeat, 160px, 160px);
+    top: 180px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+  }
+}
+// ===================== 960 =====================
+@media (max-width: 960px){
+  .about__content{
+    padding: 60px 100px 270px;
+  }
+}
+// ===================== 845 =====================
+@media (max-width: 845px){
+  .about__paragraph {
+    &::after{
+      top: 200px;
+    }
+  }
+}
+// ===================== 745 =====================
+@media (max-width: 745px){
+  .about__paragraph {
+    &::after{
+      top: 230px;
+    }
+  }
+}
+// ===================== 690 =====================
+@media (max-width: 690px){
+  .about__content{
+    padding: 60px 50px 270px;
+  }
+}
+// ===================== 590 =====================
+@media (max-width: 590px){
+  .about__paragraph {
+    &::after{
+      top: 260px;
+    }
+  }
+}
+// ===================== 540 =====================
+@media (max-width: 540px){
+  .about {
+    background-color: $black;
+    margin: 50px 0 ;
+  }
+  .about__content{
+    padding: 30px 40px;
+  }
+  .about__paragraph {
+    &::after{
+      top: -170px;
+      left: 10px;
+    }
+  }
+}
+// ===================== 520 =====================
+@media (max-width: 520px){
+  .about__paragraph {
+    &::after{
+      display: none;
+    }
+  }
+}
+// ===================== 400 =====================
+@media (max-width: 400px){
+  .about__content{
+    padding: 10px 20px;
+  }
+  .about__heading{
+    margin-bottom: 40px;
+    &::after{
+      bottom: -20px;
+    }
+  }
+}

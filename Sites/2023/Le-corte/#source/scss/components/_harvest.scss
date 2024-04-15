@@ -1,0 +1,203 @@
+section.harvest {
+  background: #E6E3C4;
+  color: $black;
+}
+.harvest__inner{
+  @extend %flex;
+  position: relative;
+  padding: 140px 0;
+  &::before{
+    @extend %element;
+    @include element($back-btn, 100%, 1px);
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+  &::after{
+    @extend %element;
+    @include element($back-btn, 100%, 1px);
+    bottom: 80px;
+    left: 0;
+    right: 0;
+  }
+}
+.harvest__content {
+  margin-right: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.harvest__subtitle {
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.harvest__heading {
+  white-space: pre-line; 
+  margin-bottom: 60px;
+  position: relative;
+  &::after{
+    @extend %element;
+    @include element($black, 160px, 1px);
+    bottom: -30px;
+    left: 0;
+    right: 0;
+  }
+}
+.harvest__paragraph {
+  @include text(14px, 400, 1.5, 445px, 0px);
+}
+.harvest__paragraph--top {
+  margin-bottom: 35px;
+}
+.harvest__rows{
+  margin-bottom: 45px;
+}
+.harvest__row {
+  @extend %flex;
+  border-top: 1px solid $black;
+  &:first-child{
+    border-top: none;
+  }
+}
+.harvest__row-numbers {
+  @include text(14px, 400, 1.5, none, 0px);
+  white-space: nowrap;
+  padding: 30px 20px;
+  border-right: 1px solid $black;
+}
+.harvest__row-info{
+  padding: 0 30px;
+}
+.harvest__row-title {
+  @include text(18px, 700, 1.5, none, 5px);
+  white-space: nowrap;
+  font-family: 'Playfair Display';
+}
+.harvest__row-text {
+  @include text(14px, 400, 1.5, none, 0px);
+}
+.harvest__paragraph--bottom {
+  margin-bottom: 45px;
+}
+.harvest__button {
+  color: #fff;
+  max-width: 254px;
+}
+.harvest__image-row{
+  display: flex;
+  align-items: center;
+}
+.harvest__image--1 {
+  margin-bottom: 30px;
+}
+.harvest__image--2 {
+  margin-right: 30px;
+}
+// ===================== 1150 =====================
+@media (max-width: 1150px){
+  .harvest__image--1 {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+  }
+  .harvest__image--2, .harvest__image--3 {
+    width: 200px;
+    height: 200px;
+  }
+}
+// ===================== 1040 =====================
+@media (max-width: 1040px){
+  .harvest__images-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .harvest__image--1 {
+    margin-left: 0;
+    transform: translateX(0);
+  }
+  .harvest__image-row{
+    flex-direction: column;
+  }
+  .harvest__image{
+    width: 300px;
+    height: 300px;
+  }
+  .harvest__image--2{
+    margin: 0 0 30px 0;
+  }
+}
+// ===================== 910 =====================
+@media (max-width: 910px){
+  .harvest__image{
+    width: 200px;
+    height: 200px;
+  }
+}
+// ===================== 810 =====================
+@media (max-width: 810px){
+  .harvest__content{
+    margin-right: 75px;
+  }
+}
+// ===================== 760 =====================
+@media (max-width: 760px){
+  .harvest__images-box{
+    display: none;
+  }
+  .harvest__content{
+    margin: 0;
+  }
+}
+// ===================== 540 =====================
+@media (max-width: 540px){
+  .harvest__inner{
+    padding: 80px 0px ;
+    &::before{
+      top: 50px;
+    }
+    &::after{
+      bottom: 50px;
+    }
+  }
+}
+// ===================== 480 =====================
+@media (max-width: 480px){
+  .harvest__rows{
+    margin-bottom: 30px;
+  }
+  .harvest__row{
+    display: block;
+    border: 1px solid $black;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    &:first-child{
+      border-top: 1px solid $black;
+    }
+  }
+  .harvest__row-numbers {
+    border-right: none;
+    padding: 10px ;
+  }
+  .harvest__row-info{
+    padding: 0 30px 30px 30px;
+    text-align: center;
+  }
+}
+// ===================== 410 =====================
+@media (max-width: 410px){
+  .harvest__paragraph{
+    max-width: none;
+  }
+  .harvest__row-info {
+    padding: 15px ;
+  }
+  .harvest__row-title{
+      white-space: wrap;
+  }
+}
+// ===================== 370 =====================
+@media (max-width: 370px){
+
+}
