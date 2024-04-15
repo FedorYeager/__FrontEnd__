@@ -1,0 +1,125 @@
+body{
+  background-color: #000;
+  font-family: sans-serif;
+}
+.header {
+  background-color: #c8c8c8;
+}
+.burger-button{
+  display: none;
+}
+.container {
+  max-width: 1220px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.header__inner {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  padding: 0 20px;
+  background-color: #fff;
+  font-size: 42px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.header__logo span{
+  font-size: 48px;
+  color: #800080;
+  font-weight: 400;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all .5s ease;
+}
+.menu__link {
+  font-size: 22px;
+  color: #1e1e1e;
+}
+@media(max-width: 768px){
+  .shadow-area{
+    display: none;
+  }
+  .active .shadow-area{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 66.666vh;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .burger-button{
+    display: block;
+    order: 1;
+    width: 70px;
+    height: 70px;
+    background-color: #800080;
+    position: relative;
+    z-index: 5;
+  }
+  .burger-line{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .5s ease;
+  }
+  .burger-line:first-child{
+    top: 15px;
+  }
+  .burger-line:nth-child(2),
+  .burger-line:nth-child(3){
+    top: 35px;
+  }
+  .burger-line:last-child{
+    top: 55px;
+  }
+  .active .burger-line:first-child{
+    transform: rotateY(90deg);
+  }
+  .active .burger-line:nth-child(2){
+    transform: rotateZ(45deg);
+  }
+  .active .burger-line:nth-child(3){
+    transform: rotateZ(-45deg);
+  }
+  .active .burger-line:last-child{
+    transform: rotateY(90deg);
+  }
+  .menu__list{
+    transform: translateY(-100%);
+    transition: all .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #800080;
+    height: 33.333vh;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 5;
+  }
+  .active .menu__list{
+    transform: translateY(0);
+    transition: all .5s ease;
+  }
+  .menu__link{
+    color: #fff;
+  }
+}

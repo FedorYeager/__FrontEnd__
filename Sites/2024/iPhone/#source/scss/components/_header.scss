@@ -1,0 +1,120 @@
+.header {
+  background-color: $main-color;
+  color: $title-color;
+  @include text(clamp(20px, 2vw, 24px), 400, normal);
+}
+.header__inner {
+  padding: 33px 0 32px;
+}
+.header__nav {
+  @extend %fl-between;
+}
+.menu-button{
+  display: none;
+}
+.header__menu {
+  @extend %fl-between;
+}
+.header__menu-item {
+  margin-right: 30px;
+  &:last-child{
+    padding-right: 0;
+  }
+}
+.header__menu-link {
+}
+.header__logo {
+  transform: translateX(-50%);
+}
+.header__logo-img {
+}
+.header__phone {
+}
+
+@media (max-width: 800px){
+  .header__menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $main-color;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    transform: translateY(-100%);
+    transition: .5s ease all;
+  }
+  .menu-open .header__menu{
+    transform: translateY(0%);
+    transition: .5s ease all;
+  }
+  .header__menu-item{
+    font-size: 46px;
+    font-weight: 700;
+    &:nth-child(2){
+      padding: 50px 0;
+    }
+  }
+  .menu-button{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    order: 1;
+    position: relative;
+  }
+  .btn-line{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 2px;
+    transition: .2s ease all;
+    &:nth-child(1){
+      top: 0;
+    }
+    &:nth-child(2){
+      top: 20px;
+    }
+    &:nth-child(3){
+      top: 20px;
+    }
+    &:nth-child(4){
+      top: 40px;
+    }
+  }
+  .menu-open .btn-line:nth-child(1){
+    transform: translateY(-20px);
+    background-color: transparent;
+  }
+  .menu-open .btn-line:nth-child(2){
+    rotate: 45deg;
+  }
+  .menu-open .btn-line:nth-child(3){
+    rotate: -45deg;
+  }
+  .menu-open .btn-line:nth-child(4){
+    transform: translateY(20px);
+    background-color: transparent;
+  }
+  .header__logo {
+    transform: translateX(0%);
+  }
+  .header__phone{
+    z-index: 2;
+  }
+}
+@media (max-width: 430px){
+  .header__nav{
+    flex-wrap: wrap;
+  }
+  .header__phone{
+    width: 100%;
+    margin-top: 50px;
+    order: 3;
+  }
+  .header__menu-item{
+    font-size: 32px;
+  }
+}

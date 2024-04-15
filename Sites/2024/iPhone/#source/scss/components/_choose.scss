@@ -1,0 +1,41 @@
+.choose {
+}
+.choose__inner {
+  padding-bottom: 150px;
+}
+.choose__title {
+}
+.choose__list {
+  @extend %fl-between;
+}
+.choose__item figure, figcaption{
+  @extend %fl-column;
+}
+.choose__image {
+  & img{
+    margin-bottom: 20px;
+  }
+}
+.choose__heading {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.choose__description {
+  font-size: 14px;
+}
+
+@media (max-width: 1100px){
+  .choose__list {
+    flex-wrap: wrap;
+  }
+  .choose__item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 550px){
+  .choose__item {
+    width: 100%;
+  }
+}

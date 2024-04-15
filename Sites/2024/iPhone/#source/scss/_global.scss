@@ -1,0 +1,98 @@
+
+// ============ BASIC ============ 
+
+body{
+  font-family: 'Inter', sans-serif;
+  color: $main-color;
+  line-height: 1.3;
+  font-weight: 400;
+}
+svg{
+  max-width: 100%;
+  height: auto;
+}
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 1220px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+// ============ SIZE ============ 
+
+.phone {
+  @include text(clamp(20px, 2vw, 24px), 400, normal);
+}
+.title {
+  text-transform: uppercase;
+  color: $title-color;
+  @include text(clamp(24px, 5vw, 32px), 700, normal);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.paragraph{
+  font-size: clamp(12px, 2vw, 14px);
+  margin-bottom: 30px;
+}
+
+// ============ FOCUS | HOVER | ACTIVE ============ 
+
+.header__menu-link,
+.phone,
+.footer__link,
+.logo,
+.headline__button,
+.contacts__button{
+  transition-property: scale, color, background-color, outline-color, outline;
+  transition-duration: .3s, .3s, .3s, .1s, .1s;
+  transition-timing-function: ease-in-out;
+}
+
+.header__menu-link:focus-visible,
+.phone:focus-visible,
+.footer__link:focus-visible,
+.logo:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media(hover: hover){
+  .header__menu-link:hover,
+  .phone:hover,
+  .footer__link:hover,
+  .logo:hover{
+    color: #fff;
+  }
+  .headline__button:hover,
+  .contacts__button:hover{
+    scale: 1.03;
+  }
+}
+@media(hover: none){
+  .header__menu-link:active,
+  .phone:active,
+  .footer__link:active,
+  .logo:active{
+    color: #fff;
+  }
+}
+
+// ============ @MEDIA-INNER ============ 
+
+@media (max-width: 768px){
+  .title{
+    margin-bottom: 30px;
+  }
+  .headline__inner,
+  .about__inner{
+    padding: 50px 0;
+  }
+  .choose__inner{
+    padding-bottom: 50px;
+  }
+}

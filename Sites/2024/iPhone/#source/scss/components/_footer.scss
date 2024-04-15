@@ -1,0 +1,21 @@
+.footer {
+  background-color: $main-color;
+  color: $title-color;
+}
+.footer__inner {
+  @extend %fl-between;
+  padding: 50px 0;
+}
+.footer__link {
+  font-size: 14px;
+}
+
+@media(max-width: 550px){
+  .footer__inner{
+    padding: 20px 0;
+    flex-direction: column;
+    & .footer__logo{
+      margin: 15px 0;
+    }
+  }
+}

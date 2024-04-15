@@ -1,0 +1,41 @@
+.headline {
+  background-color: #F5F5F7;
+}
+.headline__inner {
+  @extend %fl-column;
+  padding: 70px 0 40px;
+}
+.headline__title {
+  text-transform: uppercase;
+  color: #490E84;
+  text-align: center;
+  @include text(clamp(34px, 5vw, 64px), 700, normal);
+  margin-bottom: 40px;
+}
+.headline__image img{
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+.headline__button {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 22px 117px 19px;
+  border-radius: 30px;
+  background-color: #490E84;
+  @include text(clamp(16px, 2vw, 24px), 700, normal);
+  display: inline-block;
+  &:focus-visible{
+    outline: 2px solid #490E84;
+    outline-offset: 3px;
+  }
+  &:active{
+    color: #490E84;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 768px){
+  .headline__button{
+    padding: 15px 80px 15px;
+  }
+}
