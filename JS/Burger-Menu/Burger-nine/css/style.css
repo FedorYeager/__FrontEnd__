@@ -1,0 +1,118 @@
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #777;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+.burger-button{
+  display: none;
+}
+.header__inner {
+  width: 100%;
+}
+.header__top {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  background-color: #794f45;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 -15px;
+  padding: 10px 0;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+} 
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.header__link {
+  color: #fff;
+}
+.header__button {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 24px);
+  padding: 5px 15px;  
+  background-color: #fff;
+}
+.header__body {
+  margin-top: 25vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  }
+.header__paragraph {
+  margin-top: 20px;
+  font-weight: 200;
+  font-style: italic;
+  font-size: clamp(13px, 2vw, 20px);
+  line-height: 1.4;
+  color: orange;
+}
+
+@media (max-width: 600px) {
+  .burger-button{
+    z-index: 2;
+    display: block;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: #77608d;
+  }
+  .burger-line{
+    position: absolute;
+    left: 10%;
+    background-color: #fff;
+    width: 80%;
+    top: 25%; 
+    height: 1px;
+  }
+  .burger-line:nth-child(2){
+    top: 50%; 
+  }
+  .burger-line:nth-child(3){
+    top: 75%; 
+  }
+  .header__nav{
+    display: none;
+  }
+  .header__nav.nav-open{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #7a956b;
+    justify-content: space-around;
+    transition: all .5s;
+  }
+  .header__list {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header__button {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 10px 30px;  
+  background-color: #fff;
+}
+}
