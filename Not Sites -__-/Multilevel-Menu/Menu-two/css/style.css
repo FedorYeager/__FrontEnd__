@@ -154,7 +154,7 @@ body.touch .menu__arrow{
   }
 }
 @media (hover: none) {
-  .arrow, .sub-menu__arrow.arrow{
-  transition: all 0s;
+  .arrow, .sub-menu__arrow.arrow, .arrow.active{
+    transition: all 0s;
   }
 }
