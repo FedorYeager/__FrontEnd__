@@ -23,7 +23,7 @@ h1{
 .accordion .title{
   position: relative;
   padding: 10px;
-  transition: .2s linear;
+  transition: .3s linear;
 }
 .accordion .title:hover{
   cursor: pointer;
@@ -35,11 +35,11 @@ h1{
   right: 0;
   right: 20px;
   color: #ff4500;
-  transition: all .2s linear;
+  transition: all .3s linear;
 }
 .accordion .title.active::after{
   rotate: -180deg;
-  transition: all .2s linear;
+  transition: all .3s linear;
 }
 .title {
   font-family: sans-serif;
@@ -49,7 +49,7 @@ h1{
 }
 .accordion .box {
   overflow: hidden;
-  transition: all .2s linear;
+  transition: all .3s linear;
   max-height: 0;
 }
 .text {
