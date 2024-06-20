@@ -25,10 +25,6 @@ h1{
   padding: 10px;
   transition: .3s linear;
 }
-.accordion .title:hover{
-  cursor: pointer;
-  background-color: #0000ff80;
-}
 .accordion .title::after{
   position: absolute;
   content: '+';
@@ -58,4 +54,15 @@ h1{
   color: #222;
   padding: 10px;
   border-top: 1px solid #80808060;
+}
+@media (hover: hover){
+  .accordion .title:hover{
+    cursor: pointer;
+    background-color: #0000ff80;
+  }
+}
+@media (hover: none){
+  .accordion .title:active{
+    background-color: #0000ff80;
+  }
 }
