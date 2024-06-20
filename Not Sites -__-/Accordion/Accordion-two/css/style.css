@@ -1,0 +1,108 @@
+body{
+  background-image: linear-gradient(-30deg, #00ffff, #fff);
+  font-family: sans-serif;
+  overflow: hidden;
+}
+h3{
+  color: #1e1e1e;
+  font-size: clamp(16px, 2vw, 22px);
+  font-style: italic;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+.accordion {
+  margin-top: 15%;
+}
+.accordion__item {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.accordion__title {
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  color: #ffeded;
+  background-color: #0077ff;
+  transition: all .2s;
+}
+.accordion__title::after{
+  position: absolute;
+  content: "";
+  top: 8px;
+  right: 10px;
+  border-top: 5px solid #00e1ff;
+  border-right: 5px solid #00e1ff;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transition: all .3s ease;
+}
+.accordion__title.active::after{
+  rotate: -180deg;
+  top: 6px;
+  transition: all .3s ease;
+}
+.accordion__title::before{
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 12px;
+  border-bottom: 5px solid #00e1ff;
+  border-left: 5px solid #00e1ff;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  transition: all .3s ease;
+}
+.accordion__title.active::before{
+  rotate: 180deg;
+  transition: all .3s ease;
+  top: 16px;
+  right: 20px;
+}
+.accordion__box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  transition: all .3s ease;
+}
+.accordion__text {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: clamp(13px, 2vw, 20px);
+  padding: 0 10px;
+  
+}
+.accordion__image{
+  max-width: 350px;
+  margin-bottom: 5px;
+}
+.accordion__description {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media (hover: hover) {
+  .accordion__title:hover{
+    cursor: pointer;
+    background-color: #0077ffd8;
+    transition: all .2s;
+  }
+}
+@media (hover: none) {
+  .accordion__title:active{
+    background-color: #0077ffd8;
+    transition: all .2s;
+  }
+}
+@media (max-width: 500px){
+  .accordion__image{
+    max-width: 250px;
+  }
+}
