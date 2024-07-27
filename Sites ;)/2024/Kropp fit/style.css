@@ -202,6 +202,8 @@ svg * {
   --container-padding-x: 15px;
 
   --transition-duration: 0.2s;
+
+  --header-height: 90px
 }
 
 body{
@@ -279,6 +281,7 @@ h1, h2, h3, h4, h5, h6{
   justify-content: space-between;
   column-gap: 20px;
   padding-inline: 32px;
+  min-height: var(--header-height);
   background-color: var(--color-dark-alternate);
 }
 
@@ -294,7 +297,7 @@ h1, h2, h3, h4, h5, h6{
 
 .header__list-link{
   display: inline-flex;
-  height: 90px;
+  height: var(--header-height);
   align-items: center;
   column-gap: 7px;
   text-decoration: none;
@@ -344,11 +347,84 @@ h1, h2, h3, h4, h5, h6{
   box-shadow: 20px 0 0 currentColor;
 }
 
+.banner{
+  min-height: calc(100vh - var(--header-height));
+  padding: 36px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+}
+
+.banner__bady{
+  text-transform: uppercase;
+}
+
+.banner__bady-info{
+  display: flex;
+  align-items: end;
+  font-weight: 700;
+  font-size: clamp(16px, 1.56vw, 30px);
+  line-height: 1.27;
+}
+
+.banner__bady-info::before{
+  content: '';
+  width: clamp(60px, 10.1vw, 194px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url('./icons/light-arrow-bottom-right.svg') center/contain no-repeat;
+}
+
+.banner__bady-title{
+  font-size: min(18.75vw, 360px);
+  line-height: 1.2;
+}
+
+.banner__points-list{
+  display: flex;
+  justify-content: center;
+}
+
+.banner__points-item{
+  display: flex;
+}
+
+.banner__points-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.banner__points-button::after{
+  content: '';
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: var(--border);
+  transition-duration: var(--transition-duration);
+}
+
+.banner__points-button.is-current::after{
+  background-color: var(--color-light);
+}
+
+.banner__points-button:not(.is-current):hover::after{
+  border-color: var(--color-light-gray);
+}
+
 @media (max-width: 1024px) {
   .header{
     flex-wrap: wrap;
     padding-top: 20px;
     row-gap: 10px;
+  }
+  .header,
+  .banner{
     padding-inline: 15px;
   }
   .header__menu{
@@ -357,6 +433,9 @@ h1, h2, h3, h4, h5, h6{
   }
   .header__list-link{
     height: 50px;
+  }
+  .banner{
+    row-gap: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -374,6 +453,12 @@ h1, h2, h3, h4, h5, h6{
   }
   .header__actions {
     column-gap: 20px;
+  }
+  .banner__bady-info{
+    margin-bottom: 5px;
+  }
+  .banner__bady-info::before{
+    margin-right: 10px;
   }
 }
 @media (max-width: 1024px) {
