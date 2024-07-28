@@ -361,6 +361,7 @@ input:focus{
   position: absolute;
   z-index: -1;
   top: -0.45em;
+  line-height: 1;
   left: -0.6em;
   color: transparent;
   font-size: 2.8em;
@@ -370,7 +371,7 @@ input:focus{
 }
 
 .backdrop-title.centered::after{
-  top: -0.55em;
+  top: -0.2em;
   left: 50%;
   translate: -50% 0;
 }
@@ -589,6 +590,11 @@ input:focus{
   letter-spacing: 0.8px;
 }
 
+
+.join-us{
+  background-color: var(--color-dark-alternate);
+}
+
 .join-us__video-wrapper{
   position: relative;
   padding: 150px 30px;
@@ -622,6 +628,10 @@ input:focus{
   column-gap: 4px;
   color: var(--color-light);
   aspect-ratio: 1;
+}
+
+.location__image{
+  height: auto;
 }
 
 .join-us__play-button::after{
@@ -695,6 +705,65 @@ input:focus{
   max-width: 400px;
 }
 
+.location{
+  max-width: 1920px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location__body{
+  padding: 80px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    text-align: center;
+}
+
+.location__title:not(:last-child){
+  margin-bottom: 15px;
+}
+.location__description:not(:last-child){
+  margin-bottom: 37px;
+}
+
+.location__description{
+  max-width: 490px;
+}
+
+.family{
+  background-color: var(--color-dark-alternate);
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.family__header {
+  padding-top: 132px;
+  padding-bottom: 62px;
+  display: flex;
+  row-gap: 7px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.family__description{
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.family__body{
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.family__image{
+  scroll-snap-align: start;
+}
+
 @media (max-width: 1919px) {
   .motivation__card-image{
     margin-block: -20px;
@@ -733,10 +802,20 @@ input:focus{
     margin-block: 0;
   }
   .join-us__body{
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   .join-us__title:not(:last-child){
     margin-bottom: 80px;
+  }
+  .location{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .location__body{
+    padding: 40px 15px;
+  }
+  .family__images{
+    height: 360px;
   }
 }
 
@@ -800,6 +879,22 @@ input:focus{
     flex-direction: column;
     row-gap: 20px;
     align-items: center;
+  }
+  .location__description{
+    margin-bottom: 20px;
+  }
+  .location{
+    padding-inline: 40px;
+  }
+  .family__images{
+    height: 180px;
+  }
+  .family__header{
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  .family__body{
+    column-gap: 12px;
   }
 }
 
