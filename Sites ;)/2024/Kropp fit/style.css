@@ -810,7 +810,7 @@ input:focus{
   padding-block: 15px;
   background-color: var(--color-dark-alternate);
 }
-~
+
 @media (max-width: 1919px) {
   .motivation__card-image{
     margin-block: -20px;

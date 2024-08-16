@@ -1,0 +1,568 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] { fill: currentColor }
+svg *[stroke] { stroke: currentColor }
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+:root {
+  --color-dark: #000;
+  --color-dark-alternate: #161C2D;
+  --color-light: #fff;
+  --color-grey: #666;
+  --color-accent: #F64B4B;
+  --background-color-accent: #473BF0;
+
+  --font-family: 'Manrope', sans-serif;
+
+  --container-width: 1410px;
+  --container-padding-x: 15px;
+
+  --input-height: 45px;
+
+  --header-height: 91px;
+
+  --transition-duration: 0.2s;
+}
+
+a,
+button,
+input,
+template,
+svg *{
+  transition-duration: var(--transition-duration);
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.visually-hidden{
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.container{
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.button{
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  height: 47px;
+  background-color: var(--background-color-accent);
+  white-space: nowrap;
+  font-weight: 700;
+  border-radius: 8px;
+  color: var(--color-light);
+  font-size: 17px;
+  padding-inline: 40px;
+}
+
+.input{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  height: var(--input-height);
+  display: inline-block;
+}
+input:focus{
+  outline: none;
+  color: var(--color-dark);
+}
+.input::placeholder{
+  color: var(--color-grey);
+  padding: 12px 15px;
+}
+
+body{
+  font-family: var(--font-family);
+  color: var(--color-dark-alternate);
+  background-color: var(--color-light);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  min-height: 91px;
+}
+
+.burger-btn{
+  display: none;
+}
+
+.header__logo{
+  flex-shrink: 0;
+}
+
+.header__list{
+  display: flex;
+  column-gap: 30px;
+}
+
+.header__link{
+  color: var(--color-dark-alternate);
+    white-space: nowrap;
+}
+
+.header__link.is-current{
+  color: var(--color-accent);
+}
+
+.header__phone-link{
+  text-align: center;
+  height: 68px;
+  white-space: wrap;
+  max-width: 345px;
+}
+
+.main-background{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100vh;
+}
+
+.heroes-action{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1vw;
+}
+
+.heroes-action__info{
+  display: flex;
+  flex-direction: column;
+}
+
+.heroes-action__today-buy{
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.heroes-action__today-buy span{
+  font-size: 22px;
+}
+
+.heroes-action__title{
+  line-height: 1;
+  font-size: clamp(40px, 3vw, 60px);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.heroes-action__sub-title{
+  color: var(--color-grey);
+  font-size: clamp(24px, 1.6vw, 32px);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.heroes-action-item{
+  max-width: 585px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.heroes-action-item:last-child{
+  margin-bottom: 30px;
+}
+
+.heroes-action__heading{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.heroes-action__button{
+  font-size: 20px;
+  align-self: center;
+  z-index: 2;
+}
+
+.heroes-action__find-cost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.heroes-action__find-cost::before{
+  content: '';
+  position: absolute;
+  bottom: 70%;
+  left: 0%;
+  z-index: 2;
+  display: inline-block;
+  background: url('../icons/heroes-action/heroes-action-decor.svg') center / contain no-repeat;
+  height: 24px;
+  width: 78px;
+}
+
+.heroes-action__find-cost::after{
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  z-index: 2;
+  display: inline-block;
+  background: url('../icons/heroes-action/heroes-action-decor.svg') center / contain no-repeat;
+  height: 24px;
+  width: 78px;
+}
+
+
+.heroes-action__form{
+  background-color: #ffffffeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 525px;
+  border-radius: 35px 35px 0 0;
+  padding: 40px 60px;
+  position: relative;
+  top: -190px;
+}
+
+.heroes-action__form-heading{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.60;
+}
+
+.heroes-action__form-heading span{
+  color: var(--color-accent);
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.heroes-action__body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroes-action__input{
+  max-width: 380px;
+  margin-bottom: 10px;
+}
+
+.heroes-action__assent{
+  color: (var(--color-grey));
+  font-size: 12px;
+  padding-block: 24px;
+  max-width: 380px;
+  text-align: center;
+}
+
+.heroes-action__assent span {
+  color: var(--background-color-accent);
+}
+
+.heroes-action__form-button{
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 1300px) {
+  .header{
+    flex-wrap: wrap;
+  }
+  
+  .burger-btn{
+    z-index: 5;
+    display: block;
+    order: 1;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .header__list{
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-light);
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 30px;
+    row-gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: var(--transition-duration);
+  }
+
+  .header__list.open-menu{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroes-action{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroes-action__title{
+    white-space: wrap;
+  }
+
+  .heroes-action__find-cost::before,
+  .heroes-action__find-cost::after{
+    display: none;
+  }
+  
+  .heroes-action__form{
+    padding: 30px 15px;
+    box-shadow: 0 -10px 0 var(--background-color-accent);
+    top: -120px;
+  }
+}
+
+@media (max-width: 767px ){
+  .header{
+    font-size: 15px;
+  }
+  
+  .burger-btn{
+    order: 0;
+    padding: 0;
+  }
+  
+  .header__phone-link{
+    font-size: 15px;
+    flex-basis: 100%;
+    max-width: 100%;
+    justify-content: center;
+    height: 50px;
+  }
+  
+  .header__logo{
+    margin-block: 5px;
+  }
+  
+  .heroes-action__today-buy{
+    max-width: 200px;
+  }
+  
+  .heroes-action__paragraph{
+    font-size: 15px;
+  }
+  
+  .heroes-action__form-heading{
+    font-size: 20px;
+  }
+  
+  .heroes-action__form-heading span{
+    font-size: 28px;
+  }
+}

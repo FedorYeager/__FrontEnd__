@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Autovkp.ru</title>
+</head>
+<body>
+  <header class="header container">
+      <a class="header__logo" href="/">
+        <img src="images/logo.png" alt="Buying car logo" height="43px" width="201px" loading="lazy">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link is-current" href="/">Выкуп авто</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/">Подбор авто</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/">Авториелтор</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/">Услуги</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/">Полезное</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger-btn" type="button" title="Open menu">
+        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M22 7.96555V5.95177H2V7.96555H22ZM22 9.97933V11.9931H2V9.97933H22ZM22 16.0207V14.0069H2V16.0207H22ZM22 20.0482V18.0345H2V20.0482H22Z"
+        fill="black" />
+      </svg>
+    </button>
+    <a class="header__phone-link button" href="tel:+74990000000">Срочный выкуп авто. Звоните! <br> +7 (499) 000-00-00</a>
+  </header>
+  <img class="main-background" src="images/BG.jpg" alt="">
+  <main>
+    <section class="heroes-action container">
+      <div class="heroes-action__info">
+        <div class="heroes-action__today-buy">
+          За сегодня выкуплено:
+          <span>5 автомобилей</span>
+        </div>
+        <h1 class="heroes-action__title">Выкуп авто в Москве</h1>
+        <div class="heroes-action__sub-title">дороже чем trade-in или аукцион</div>
+        <ul class="heroes-action__list">
+          <li class="heroes-action-item">
+            <img src="icons/heroes-action/1.svg" alt="">
+            <div class="heroes-action__text">
+              <div class="heroes-action__heading">Быстрая оценка</div>
+              <p class="heroes-action__paragraph">Мы ценим ваше время. Получите быструю и объективную оценку вашего авто в режиме онлайн, без ожиданий и лишних звонков.</p>
+            </div>
+          </li>
+          <li class="heroes-action-item">
+            <img src="icons/heroes-action/2.svg" alt="">
+            <div class="heroes-action__text">
+              <div class="heroes-action__heading">Быстрая оценка</div>
+              <p class="heroes-action__paragraph">Безопасность и уверенность в сделке. Мы гарантируем выкуп вашего авто, без скрытых условий или дополнительных комиссий.</p>
+            </div>
+          </li>
+          <li class="heroes-action-item">
+            <img src="icons/heroes-action/3.svg" alt="">
+            <div class="heroes-action__text">
+              <div class="heroes-action__heading">Быстрая оценка</div>
+              <p class="heroes-action__paragraph">Благодаря нашему опыту и аналитике рынка, мы предлагаем самые высокие и конкурентоспособные цены на ваш автомобиль.</p>
+            </div>
+          </li>
+          <li class="heroes-action-item">
+            <img src="icons/heroes-action/4.svg" alt="">
+            <div class="heroes-action__text">
+              <div class="heroes-action__heading">Быстрая оценка</div>
+              <p class="heroes-action__paragraph">Забудьте о бумажной волоките и долгих переговорах. Мы делаем процесс продажи вашего авто максимально простым и комфортным для вас.</p>
+            </div>
+          </li>
+        </ul>
+        <button class="heroes-action__button button" type="button">Запрос оценки</button>
+      </div>
+      <div class="heroes-action__find-cost">
+        <img class="heroes-action__image" src="images/heroes-action.png" alt="Красная машина" width="630px" height="500px" loading="lazy">
+        <form class="heroes-action__form">
+          <div class="heroes-action__form-heading">
+            Узнайте стоимость своего авто <br>
+            <span>за 3 минуты</span>
+          </div>
+          <div class="heroes-action__body">
+            <label class="visually-hidden" for="model">Марка, модель, год выпуска</label>
+            <input class="heroes-action__input input" id="model" placeholder="Марка, модель, год выпуска" required>
+            <label class="visually-hidden" for="tel">Телефон</label>
+            <input class="heroes-action__input input" id="tel" placeholder="Телефон" required>
+            <p class="heroes-action__assent">Продолжая, вы принимаете согласие <span>на сбор и обработку персональных данных</span></p>
+            <button class="heroes-action__form-button button" type="button">Узнать стоимость</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
