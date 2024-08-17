@@ -200,6 +200,9 @@ input[type=number]{
   --color-accent: #F64B4B;
   --background-color-accent: #473BF0;
 
+  --box-shadow-blue: 0 -10px 0 var(--background-color-accent);
+  --box-shadow-dark: 0 2px 100px var(--color-grey);
+
   --font-family: 'Manrope', sans-serif;
 
   --container-width: 1410px;
@@ -223,6 +226,10 @@ svg *{
 a{
   text-decoration: none;
   display: inline-block;
+}
+
+ol li {
+  list-style-type: none;
 }
 
 .visually-hidden{
@@ -249,21 +256,22 @@ a{
   display: inline-flex;
   align-items: center;
   height: 47px;
-  background-color: var(--background-color-accent);
+  background-color: var(--color-accent);
   white-space: nowrap;
   font-weight: 700;
   border-radius: 8px;
   color: var(--color-light);
-  font-size: 17px;
+  font-size: clamp(15px, 0.85vw, 17px);
   padding-inline: 40px;
 }
 
 .input{
   width: 100%;
-  border: none;
   border-radius: 5px;
   height: var(--input-height);
   display: inline-block;
+  padding: 12px 15px;
+  border: 1px solid #f4f7fa
 }
 input:focus{
   outline: none;
@@ -271,7 +279,45 @@ input:focus{
 }
 .input::placeholder{
   color: var(--color-grey);
+}
+
+select{
+  all: unset; 
+  width: clamp(300px, 30vw, 600px);
+  border-radius: 5px;
+  display: inline-block;
   padding: 12px 15px;
+  border: 1px solid #f4f7fa
+}
+
+select option{
+  width: 100%;
+  display: inline-block;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+select {
+  color: var(--color-grey);
+} 
+
+.title{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(24px, 2.4vw, 48px);
+  text-align: center;
+  margin-inline: auto;
+}
+
+.assent{
+  color: (var(--color-grey));
+  font-size: 12px;
+  text-align: center;
+}
+
+.assent a {
+  color: var(--background-color-accent);
 }
 
 body{
@@ -314,6 +360,7 @@ body{
 }
 
 .header__phone-link{
+  background-color: var(--background-color-accent);
   text-align: center;
   height: 68px;
   white-space: wrap;
@@ -332,7 +379,7 @@ body{
   justify-content: space-between;
   column-gap: 1vw;
 }
-
+heroes-action__button
 .heroes-action__info{
   display: flex;
   flex-direction: column;
@@ -344,11 +391,11 @@ body{
   margin-bottom: 30px;
 }
 
-.heroes-action__today-buy span{
+.heroes-action__today-buy strong{
   font-size: 22px;
 }
 
-.heroes-action__title{
+.heroes-action__main-title{
   line-height: 1;
   font-size: clamp(40px, 3vw, 60px);
   margin-bottom: 10px;
@@ -384,9 +431,9 @@ body{
 }
 
 .heroes-action__button{
-  font-size: 20px;
+  background-color: var(--background-color-accent);
+  font-size: clamp(15px, 1vw, 20px);
   align-self: center;
-  z-index: 2;
 }
 
 .heroes-action__find-cost{
@@ -422,7 +469,7 @@ body{
 
 
 .heroes-action__form{
-  background-color: #ffffffeb;
+  background-color: #fafafaeb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,7 +477,8 @@ body{
   border-radius: 35px 35px 0 0;
   padding: 40px 60px;
   position: relative;
-  top: -190px;
+  bottom: calc(100% - 700px);
+  box-shadow: var(--box-shadow-blue);
 }
 
 .heroes-action__form-heading{
@@ -441,7 +489,7 @@ body{
   line-height: 1.60;
 }
 
-.heroes-action__form-heading span{
+.heroes-action__form-heading b{
   color: var(--color-accent);
   font-size: 35px;
   text-transform: uppercase;
@@ -466,13 +514,93 @@ body{
   text-align: center;
 }
 
-.heroes-action__assent span {
+.heroes-action__assent a {
   color: var(--background-color-accent);
 }
 
 .heroes-action__form-button{
   background-color: var(--color-accent);
 }
+
+.impact{
+  padding: 60px 0 90px;
+}
+
+.impact__title{
+  margin-bottom: 30px;
+  max-width: 690px;
+}
+
+.impact__list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 1.5vw;
+}
+
+.impact__item{
+  max-width: 330px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.impact__heading{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.calculator{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  box-shadow: var(--box-shadow-blue), var(--box-shadow-dark);
+  border-radius: 35px;
+  padding-block: 40px;
+}
+
+.calculator__form{
+  display: flex;
+  column-gap: 4.5vw;
+}
+
+.calculator__car-info,
+.calculator__user-info{
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 15px;
+}
+
+.calculator__heading{
+  font-weight: 700;
+  line-height: 1.35;
+  font-size: clamp(17px, 1vw, 20px);
+}
+
+.calculator__button{
+  align-self: end;
+}
+
+.calculator__assent{
+  align-self: center;
+  max-width: 300px;
+}
+
+.image-1{
+  position: relative; 
+  bottom: 100px;
+  right: 50%;
+  display: block; 
+  margin-left: auto;
+  translate: 50% 0
+}
+
 
 @media (max-width: 1300px) {
   .header{
@@ -495,6 +623,7 @@ body{
     padding-left: 15px;
     padding-top: 30px;
     row-gap: 15px;
+    z-index: 4;
     opacity: 0;
     visibility: hidden;
     transition-duration: var(--transition-duration);
@@ -503,6 +632,34 @@ body{
   .header__list.open-menu{
     opacity: 1;
     visibility: visible;
+  }
+
+  .impact__list{
+    row-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calculator{
+    padding-block: 30px;
+  }
+
+  .calculator__car-info,
+  .calculator__user-info{
+    align-items: center;
+  }
+
+  .calculator__form{
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .calculator__button{
+    align-self: center;
+  }
+  .image-1{
+    /* width: 400px; */
+    bottom: -15px;
+    right: 50%;
   }
 }
 
@@ -523,8 +680,11 @@ body{
   
   .heroes-action__form{
     padding: 30px 15px;
-    box-shadow: 0 -10px 0 var(--background-color-accent);
-    top: -120px;
+    bottom: calc(100% - 600px);
+  }
+
+  .impact{
+    padding-block: 30px;
   }
 }
 
@@ -539,7 +699,6 @@ body{
   }
   
   .header__phone-link{
-    font-size: 15px;
     flex-basis: 100%;
     max-width: 100%;
     justify-content: center;
@@ -549,7 +708,11 @@ body{
   .header__logo{
     margin-block: 5px;
   }
-  
+
+.heroes-action__main-title{
+  white-space: wrap;
+}
+
   .heroes-action__today-buy{
     max-width: 200px;
   }
@@ -562,7 +725,24 @@ body{
     font-size: 20px;
   }
   
-  .heroes-action__form-heading span{
+  .heroes-action__form-heading b{
     font-size: 28px;
+  }
+
+  .impact__list{
+    grid-template-columns: 1fr;
+  }
+
+  .impact__title{
+    margin-bottom: 15px;
+  }
+
+  .impact__num-image{
+    width: 60px;
+    height: 65px;
+  }
+
+  .impact__paragraph{
+    font-size: 15px;
   }
 }

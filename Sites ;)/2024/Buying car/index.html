@@ -48,9 +48,9 @@
       <div class="heroes-action__info">
         <div class="heroes-action__today-buy">
           За сегодня выкуплено:
-          <span>5 автомобилей</span>
+          <strong>5 автомобилей</strong>
         </div>
-        <h1 class="heroes-action__title">Выкуп авто в Москве</h1>
+        <h1 class="heroes-action__main-title">Выкуп авто в Москве</h1>
         <div class="heroes-action__sub-title">дороже чем trade-in или аукцион</div>
         <ul class="heroes-action__list">
           <li class="heroes-action-item">
@@ -89,19 +89,106 @@
         <form class="heroes-action__form">
           <div class="heroes-action__form-heading">
             Узнайте стоимость своего авто <br>
-            <span>за 3 минуты</span>
+            <b>за 3 минуты</b>
           </div>
           <div class="heroes-action__body">
             <label class="visually-hidden" for="model">Марка, модель, год выпуска</label>
-            <input class="heroes-action__input input" id="model" placeholder="Марка, модель, год выпуска" required>
+            <input class="heroes-action__input input" type="text" id="model" placeholder="Марка, модель, год выпуска" required>
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input class="heroes-action__input input" id="tel" placeholder="Телефон" required>
-            <p class="heroes-action__assent">Продолжая, вы принимаете согласие <span>на сбор и обработку персональных данных</span></p>
+            <input class="heroes-action__input input" type="tel" id="tel" placeholder="Телефон" required>
+            <p class="heroes-action__assent assent">Продолжая, вы принимаете согласие <a href="/">на сбор и обработку персональных данных</a></p>
             <button class="heroes-action__form-button button" type="button">Узнать стоимость</button>
           </div>
         </form>
       </div>
     </section>
+    <section class="impact container">
+      <h2 class="impact__title title">Что влияет на стоимость автомобиля при выкупе?</h2>
+      <ol class="impact__list">
+        <li class="impact__item">
+          <img class="impact__num-image" src="icons/impact/1.svg" alt="">
+          <div class="impact__text">
+            <h3 class="impact__heading">Техническая часть</h3>
+            <p class="impact__paragraph">Мы должны убедиться в каком техническом состоянии находится Ваш автомобиль.</p>
+          </div>
+        </li>
+        <li class="impact__item">
+          <img class="impact__num-image" src="icons/impact/2.svg" alt="">
+          <div class="impact__text">
+            <h3 class="impact__heading">История автомобиля</h3>
+            <p class="impact__paragraph">Для выкупа очень важна история автомобиля. Мы просмотрим автотеку.</p>
+          </div>
+        </li>
+        <li class="impact__item">
+          <img class="impact__num-image" src="icons/impact/3.svg" alt="">
+          <div class="impact__text">
+            <h3 class="impact__heading">Кузовные детали</h3>
+            <p class="impact__paragraph">Кузов авто очень влияет на цену выкупа, ведь внешний вид - это ключ для продажи машины.</p>
+          </div>
+        </li>
+        <li class="impact__item">
+          <img class="impact__num-image" src="icons/impact/4.svg" alt="">
+          <div class="impact__text">
+            <h3 class="impact__heading">Наличие других проблем</h3>
+            <p class="impact__paragraph">Проблемные авто тяжелее всего продать, так что мы будем учитывать все факторы.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="calculator container">
+      <h2 class="calculator__title title">Калькулятор стоимости</h2>
+      <form class="calculator__form">
+        <div class="calculator__car-info">
+          <p class="calculator__heading">Информация о автомобиле</p>
+          <label class="visually-hidden" for="model">Марка, модель, год выпуска</label>
+          <input class="calculator__input input" type="text" id="model" placeholder="Марка, модель, год выпуска" required>
+          <label class="visually-hidden" for="year_of_release">Год выпуска</label>
+          <select name="year-of-release" id="year_of_release">
+            <option value="">Год выпуска</option>
+            <option value="1980-1990">1980-1990</option>
+            <option value="1990-2000">1990-2000</option>
+            <option value="2000-2010">2000-2010</option>
+            <option value="2010-2020">2010-2020</option>
+            <option value="2020+">2020+</option>
+          </select>
+          <label class="visually-hidden" for="car_body_type">Тип кузова автомобиля</label>
+          <select name="car-body-type" id="car_body_type">
+            <option value="">Тип кузова автомобиля</option>
+            <option value="sedan">Седан</option>
+            <option value="hatchback">Хэтчбек</option>
+            <option value="station-wagon">Универсал</option>
+            <option value="coupe">Купе</option>
+            <option value="crossover">Кроссовер</option>
+            <option value="suv">Внедорожник</option>
+            <option value="convertible">Кабриолет</option>
+          </select>
+          <label class="visually-hidden" for="type_of_car_box">Тип коробки автомобиля</label>
+          <select name="type-of-car-box" id="type_of_car_box">
+            <option value="">Тип коробки автомобиля</option>
+            <option value="manual-transmission">Механическая коробка передач</option>
+            <option value="automatic-transmission">Автоматическая коробка передач</option>
+          </select>
+          <label class="visually-hidden" for="mileage">Пробег</label>
+          <input class="calculator__input input" type="number" id="mileage" placeholder="Пробег" required>
+        </div>
+        <div class="calculator__user-info">
+          <p class="calculator__heading">Личная информация</p>
+          <p class="calculator__text">Как с Вами связаться</p>
+          <label class="visually-hidden" for="user_connection">Выбрать тип связи</label>
+          <select name="user-connection" id="user_connection">
+            <option value="telephone">По телефону</option>
+            <option value="whats-app">Ватсап</option>
+            <option value="vk">Вконтакте</option>
+            <option value="telegram">Телеграм</option>
+          </select>
+          <label class="visually-hidden" for="user_telephone"></label>
+          <input class="calculator__input input" type="tel" id="user_telephone" placeholder="+7 (___) - ___-__-__" required>
+          <p class="calculator__assent assent">Продолжая, вы принимаете согласие <a href="/">на сбор и обработку персональных данных</a></p>
+          <button class="calculator__button button" type="button">Оценить автомобиль</button>
+        </div>
+      </form>
+    </section>
+    <img class="image-1" src="images/car.png" width="620px" height="300px" loading="lazy" alt="Машина">
   </main>
   <script src="main.js"></script>
 </body>
