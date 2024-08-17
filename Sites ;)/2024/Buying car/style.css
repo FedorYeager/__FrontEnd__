@@ -379,7 +379,7 @@ body{
   justify-content: space-between;
   column-gap: 1vw;
 }
-heroes-action__button
+
 .heroes-action__info{
   display: flex;
   flex-direction: column;
@@ -601,6 +601,173 @@ heroes-action__button
   translate: 50% 0
 }
 
+.compare{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.compare__title{
+  margin-bottom: 10px;
+}
+
+.compare__sub-title{
+  font-weight: 700;
+  color: var(--color-grey);
+  font-size: clamp(17px, 1.2vw, 24px);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.compare__cards-area{
+  display: flex;
+  align-items: flex-start;
+}
+
+.compare__card,
+.compare__main-card{
+  border-radius: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.compare__card{
+  background-color: #f9f9f9;
+}
+
+.compare__card:first-child{
+  box-shadow: -5px -5px 20px var(--color-grey);
+}
+.compare__card:last-child{
+  box-shadow: 5px -5px 20px var(--color-grey);
+}
+
+.compare__card-heading,
+.compare__card-paragraph{
+  max-width: 320px;
+}
+
+.compare__card-heading{
+  font-size: clamp(20px, 1.3vw, 26px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.compare__card-paragraph{
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.compare__card-paragraph::before{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #d3d3d3;
+  bottom: -30px;
+  right: 0;
+}
+
+.compare__card-list{
+  align-self: self-start;
+}
+
+.compare__card-item{
+  display: flex;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.compare__card-item:last-child{
+  margin-bottom: 0;
+}
+
+.compare__card-check{
+  margin-right: 15px;
+}
+
+.compare__card-item-heading{
+  font-weight: 700;
+  font-size: clamp(17px, 1vw, 20px);
+}
+
+.compare__main-card{
+  z-index: 1;
+  box-shadow: var(--box-shadow-blue), -5px -5px 20px var(--color-grey), 5px -5px 20px var(--color-grey);
+}
+
+.main-card__heading{
+  font-weight: 700;
+  color: var(--background-color-accent);
+  letter-spacing: 1px;
+  font-size: clamp(20px, 1.6vw, 32px);
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.main-card__paragraph{
+  font-weight: 700;
+  font-size: clamp(17px, 1.2vw, 24px);
+  max-width: 445px;
+  margin-bottom: 30px;
+}
+
+.main-card__sub-heading{
+  color: var(--background-color-accent);
+  font-size: clamp(17px, 1.2vw, 24px);
+  font-weight: 700;
+  margin-bottom: 135px;
+  position: relative;
+}
+
+.main-card__sub-heading::before{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #d3d3d3;
+  bottom: -63px;
+  right: 0;
+}
+
+.main-card__list{
+  align-self: self-start;
+}
+
+.main-card__item{
+  display: flex;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.main-card__item:last-child{
+  margin-bottom: 70px;
+}
+
+.main-card__item-heading{
+  font-weight: 700;
+  font-size: clamp(15px, 1vw, 20px);
+}
+
+.main-card__item-heading b{
+  color: var(--color-accent);
+}
+
+.main-card__item-paragraph{
+  line-height: 1.35;
+  font-size: clamp(17px, 1vw, 20px);
+}
+
+.main-card__button{
+  font-size: 17px;
+}
 
 @media (max-width: 1300px) {
   .header{
@@ -657,9 +824,13 @@ heroes-action__button
     align-self: center;
   }
   .image-1{
-    /* width: 400px; */
     bottom: -15px;
     right: 50%;
+  }
+
+  .compare__cards-area{
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -744,5 +915,44 @@ heroes-action__button
 
   .impact__paragraph{
     font-size: 15px;
+  }
+
+  .compare{
+    padding-bottom: 0;
+  }
+
+  .compare__sub-title{
+    margin-bottom: 15px;
+  }
+
+  .compare__card,
+  .compare__main-card{
+    padding: 30px 15px;
+  }
+
+  .compare__card:first-child{
+  box-shadow: 0 -5px 20px var(--color-grey);
+}
+.compare__card:last-child{
+  box-shadow: 0 -5px 20px var(--color-grey);
+}
+
+  .compare__card-heading,
+  .main-card__heading{
+    margin-bottom: 10px;
+  }
+
+  .compare__card-paragraph,
+  .main-card__sub-heading{
+    margin-bottom: 30px;
+  }
+
+  .compare__card-paragraph::before,
+  .main-card__sub-heading::before{
+    bottom: -15px;
+  }
+
+  .main-card__item:last-child{
+    margin-bottom: 15px;
   }
 }
