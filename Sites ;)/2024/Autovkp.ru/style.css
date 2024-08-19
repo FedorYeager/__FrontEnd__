@@ -245,7 +245,7 @@ ol li {
   overflow: hidden !important;
 }
 
-.container{
+.container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   padding-inline: var(--container-padding-x);
   margin-inline: auto;
@@ -522,34 +522,44 @@ body{
   background-color: var(--color-accent);
 }
 
-.impact{
+.impact,
+.how-happens{
   padding: 60px 0 90px;
 }
 
 .impact__title{
-  margin-bottom: 30px;
   max-width: 690px;
+  margin-bottom: 30px;
 }
 
-.impact__list{
+.impact__list,
+.how-happens__list{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
   column-gap: 1.5vw;
+  margin-bottom: 50px;
 }
 
-.impact__item{
+.impact__item,
+.how-happens__item{
   max-width: 330px;
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
 
-.impact__heading{
-  font-size: 24px;
+.impact__heading,
+.how-happens__heading{
+  font-size: clamp(17px, 1.2vw, 24px);
   font-weight: 700;
   margin-bottom: 5px;
+}
+
+.impact__paragraph,
+.how-happens__paragraph{
+  font-size: clamp(15px, 0.85vw, 17px);
 }
 
 .calculator{
@@ -826,27 +836,133 @@ body{
   font-size: clamp(17px, 1vw, 20px);
 }
 
+.how-happens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-happens__title{
+  margin-bottom: 50px;
+}
+
+.how-happens__item{
+  align-items: center;
+}
+
+.how-happens__button{
+  height: 62px;
+  letter-spacing: 1px;
+  font-size: clamp(17px, 1.3vw, 26px);
+}
+
+.models,
+.location{
+  padding-block: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.models::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -195px;
+  right: -195px;
+  bottom: 0;
+  background: url('./images/BG-3.png') 0 0 / cover no-repeat;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.models__title,
+.location__title{
+  color: var(--color-light);
+  font-size: clamp(24px, 2.4vw, 48px);
+  text-align: center;text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.models__main{
+  display: grid;
+  row-gap: 50px;
+  column-gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.models__column{
+  min-width: 175px;
+}
+
+.models__column-mark,
+.location__column-mark{
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--color-light);
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.models__column-mark:last-child,
+.location__column-mark:last-child{
+  margin-bottom: 0;
+}
+
+.models__button,
+.location__button{
+  margin-top: 30px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-light);
+  font-size: 15px;
+  text-decoration: underline var(--color-light);
+}
+
+.location::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -195px;
+  right: -195px;
+  bottom: 0;
+  background: url('./images/BG-4.png') 0 0 / cover no-repeat;
+  border-radius: 50px 50px 0 0;
+  z-index: -1;
+}
+
+.location__main{
+  display: grid;
+  row-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: clamp(7px, 4vw, 100px);
+}
+
 @media (max-width: 1900px) {
-  .services::before {
+  .services::before,
+  .models::before,
+  .location::before{
     left: -100px;
     right: -100px;
   }
-
+  
   .services__row{
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 1750px) {
-  .services::before {
+  .services::before,
+  .models::before,
+  .location::before{
     left: 15px;
     right: 15px;
   }
-
+  
   .services__bg{
     height: 500px;
   }
-
+  
   .services__row{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -857,7 +973,9 @@ body{
     background-color: var(--background-color-accent);
     border-radius: 50px 50px 0 0;
   }
-  .services::before {
+  .services::before,
+  .models::before,
+  .location::before{
     display: none;
   }
   .services__bg{
@@ -865,6 +983,14 @@ body{
   }
   .services__row{
     grid-template-columns: 1fr;
+  }
+  .models{
+    background: url('./images/BG-3.png') 50% 50% / cover no-repeat;
+    border-radius: 50px;
+  }
+  .location{
+    background: url('./images/BG-4.png') 50% 50% / cover no-repeat;
+    border-radius: 50px 50px 0 0;
   }
 }
 
@@ -900,7 +1026,8 @@ body{
     visibility: visible;
   }
 
-  .impact__list{
+  .impact__list,
+  .how-happens__list{
     row-gap: 15px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -931,6 +1058,14 @@ body{
     flex-direction: column;
     align-items: center;
   }
+
+  .how-happens__list{
+    justify-items: start;
+  }
+
+  .models__main{
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -953,8 +1088,13 @@ body{
     bottom: calc(100% - 600px);
   }
 
-  .impact{
+  .impact,
+  .how-happens{
     padding-block: 30px;
+  }
+
+  .models__main{
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -979,9 +1119,9 @@ body{
     margin-block: 5px;
   }
 
-.heroes-action__main-title{
-  white-space: wrap;
-}
+  .heroes-action__main-title{
+    white-space: wrap;
+  }
 
   .heroes-action__today-buy{
     max-width: 200px;
@@ -999,21 +1139,20 @@ body{
     font-size: 28px;
   }
 
-  .impact__list{
+  .impact__list,
+  .how-happens__list{
     grid-template-columns: 1fr;
   }
 
-  .impact__title{
+  .impact__title,
+  .how-happens__title{
     margin-bottom: 15px;
   }
 
-  .impact__num-image{
+  .impact__num-image,
+  .how-happens__num-image{
     width: 60px;
     height: 65px;
-  }
-
-  .impact__paragraph{
-    font-size: 15px;
   }
 
   .compare{
@@ -1030,11 +1169,11 @@ body{
   }
 
   .compare__card:first-child{
-  box-shadow: 0 -5px 20px var(--color-grey);
-}
-.compare__card:last-child{
-  box-shadow: 0 -5px 20px var(--color-grey);
-}
+    box-shadow: 0 -5px 20px var(--color-grey);
+  }
+  .compare__card:last-child{
+    box-shadow: 0 -5px 20px var(--color-grey);
+  }
 
   .compare__card-heading,
   .main-card__heading{
@@ -1069,5 +1208,31 @@ body{
   }
   .services__row{
     gap: 10px;
+  }
+
+  .how-happens__list{
+    margin-bottom: 30px;
+    align-self: flex-start;
+  }
+
+  .how-happens__button{
+    height: 47px;
+    letter-spacing: 0;
+  }
+
+  .models{
+    padding-block: 30px;
+  }
+
+  .models__main{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .models__column{
+    min-width: 95px;
+  }
+
+  .location__main{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
