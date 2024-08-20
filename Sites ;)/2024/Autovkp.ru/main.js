@@ -8,6 +8,30 @@ burgerButton.addEventListener('click', ()=> {
 // ! ========================================
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const titles = document.querySelectorAll('.benefits__title');
+  const boxes = document.querySelectorAll('.benefits__box');
+  titles.forEach((title, index) => {
+    title.addEventListener('click', () => {
+      if (title.classList.contains('active')) {
+        title.classList.remove('active');
+        boxes[index].classList.remove('active');
+      } else {
+        titles.forEach((t, i) => {
+          t.classList.remove('active');
+          boxes[i].classList.remove('active');
+        });
+        title.classList.add('active');
+        boxes[index].classList.add('active');
+      }
+    });
+  });
+});
+
+
+// ! ========================================
+
+
 const showMoreButtonModels = document.querySelector('.models__button')
 const modelsColumns = Array.from(document.querySelectorAll('.models__column'))
 
@@ -84,6 +108,7 @@ responseModelFour()
 
 
 // ! ========================================
+
 
 const showMoreButtonLocation = document.querySelector('.location__button')
 const locationsColumns = Array.from(document.querySelectorAll('.location__column'))
