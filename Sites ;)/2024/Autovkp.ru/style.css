@@ -1487,6 +1487,8 @@ body{
 }
 
 .quick__paragraph{
+  color: var(--color-dark);
+  font-size: clamp(15px, 0.85vw, 17px);
   margin-bottom: 30px;
 }
 
@@ -1497,6 +1499,21 @@ body{
 .quick__messenger-box{
   display: flex;
   column-gap: 15px;
+}
+
+.sell-smart{
+  margin-bottom: 90px;
+}
+
+.sell-smart__title{
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+
+.sell-smart__paragraph{
+  font-size: clamp(15px, 0.85vw, 17px);
+  color: var(--color-dark);
+  text-align: justify;
 }
 
 @media (max-width: 1900px) {
@@ -2033,6 +2050,10 @@ body{
 
   .quick__main-form{
     align-self: center;
+  }
+
+  .sell-smart{
+    margin-bottom: 30px;
   }
 }
 
