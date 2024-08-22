@@ -189,8 +189,36 @@ btnShowPhoto.addEventListener('click', () => {
 })
 
 
+// ! ========================================
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.question__item');
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.question__item-heading');
+    header.addEventListener('click', function () {
+      accordionItems.forEach(i => {
+        const content = i.querySelector('.question__item-content');
+        if (i !== item) {
+          content.style.display = 'none';
+          i.classList.remove('question__item-active');
+        }
+      });
+      const content = item.querySelector('.question__item-content');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        item.classList.remove('question__item-active');
+      } else {
+        content.style.display = 'block';
+        item.classList.add('question__item-active');
+      }
+    });
+  });
+});
+
 
 // ! ========================================
+
 
 const showMoreButtonLocation = document.querySelector('.location__button')
 const locationsColumns = Array.from(document.querySelectorAll('.location__column'))
