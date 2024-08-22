@@ -220,6 +220,53 @@ document.addEventListener('DOMContentLoaded', function () {
 // ! ========================================
 
 
+document.querySelectorAll('.feedback__button').forEach(button => {
+  button.addEventListener('click', () => {
+    const feedbackItem = button.closest('.feedback__slider-item');
+    const feedbackContent = feedbackItem.querySelector('.feedback__content-text');
+    const arrowIcon = button.querySelector('.feedback__arrow');
+    // Переключение класса active на иконке стрелки
+    arrowIcon.classList.toggle('active');
+    if (feedbackContent.classList.contains('expanded')) {
+      feedbackContent.classList.remove('expanded');
+      button.textContent = 'Развернуть отзыв';
+      button.appendChild(arrowIcon); // Перемещение иконки в правильное место после изменения текста
+    } else {
+      feedbackContent.classList.add('expanded');
+      button.textContent = 'Свернуть отзыв';
+      button.appendChild(arrowIcon); // Перемещение иконки в правильное место после изменения текста
+    }
+    
+    // Обновление текста кнопки
+    button.querySelector('span').textContent = feedbackContent.classList.contains('expanded') ? 'Свернуть отзыв' : 'Развернуть отзыв';
+  });
+});
+
+const showTextFeedback = document.querySelector('.show-text-feedback')
+const showVideoFeedback = document.querySelector('.show-video-feedback')
+const textFeedback = document.querySelector('.slider-text')
+const videoFeedback = document.querySelector('.slider-video')
+
+showVideoFeedback.addEventListener('click', () => {
+  showVideoFeedback.classList.add('active')
+  videoFeedback.classList.add('active')
+  showTextFeedback.classList.remove('active')
+  textFeedback.classList.remove('active')
+})
+
+showTextFeedback.addEventListener('click', () => {
+  showTextFeedback.classList.add('active')
+  textFeedback.classList.add('active')
+  showVideoFeedback.classList.remove('active')
+  videoFeedback.classList.remove('active')
+})
+
+
+
+
+// ! ========================================
+
+
 const showMoreButtonLocation = document.querySelector('.location__button')
 const locationsColumns = Array.from(document.querySelectorAll('.location__column'))
 
