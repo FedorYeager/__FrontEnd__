@@ -92,11 +92,11 @@
             <b>за 3 минуты</b>
           </div>
           <div class="heroes-action__body">
-            <label class="visually-hidden" for="model">Марка, модель, год выпуска</label>
-            <input class="heroes-action__input input" type="text" id="model" placeholder="Марка, модель, год выпуска" required>
-            <label class="visually-hidden" for="tel">Телефон</label>
-            <input class="heroes-action__input input" type="tel" id="tel" placeholder="Телефон" required>
-            <p class="heroes-action__assent assent">Продолжая, вы принимаете согласие <a href="/">на сбор и обработку персональных данных</a></p>
+            <label class="visually-hidden" for="model-1">Марка, модель, год выпуска</label>
+            <input class="heroes-action__input input" type="text" id="model-1" placeholder="Марка, модель, год выпуска" required>
+            <label class="visually-hidden" for="tel-1">Телефон</label>
+            <input class="heroes-action__input input" type="tel" id="tel-1" placeholder="Телефон" required>
+            <p class="heroes-action__assent assent">Продолжая, вы принимаете согласие на<a href="/"> сбор и обработку персональных данных</a></p>
             <button class="heroes-action__form-button button" type="button">Узнать стоимость</button>
           </div>
         </form>
@@ -140,8 +140,8 @@
       <form class="calculator__form">
         <div class="calculator__car-info">
           <p class="calculator__heading">Информация о автомобиле</p>
-          <label class="visually-hidden" for="model">Марка, модель, год выпуска</label>
-          <input class="calculator__input input" type="text" id="model" placeholder="Марка, модель, год выпуска" required>
+          <label class="visually-hidden" for="model-2">Марка, модель, год выпуска</label>
+          <input class="calculator__input input" type="text" id="model-2" placeholder="Марка, модель, год выпуска" required>
           <label class="visually-hidden" for="year_of_release">Год выпуска</label>
           <select name="year-of-release" id="year_of_release">
             <option value="">Год выпуска</option>
@@ -174,16 +174,16 @@
         <div class="calculator__user-info">
           <p class="calculator__heading">Личная информация</p>
           <p class="calculator__text">Как с Вами связаться</p>
-          <label class="visually-hidden" for="user_connection">Выбрать тип связи</label>
-          <select name="user-connection" id="user_connection">
+          <label class="visually-hidden" for="user_connection-1">Выбрать тип связи</label>
+          <select name="user-connection" id="user_connection-1">
             <option value="telephone">По телефону</option>
             <option value="whats-app">Ватсап</option>
-            <option value="vk">Вконтакте</option>
+            <option value="viber">Вайбер</option>
             <option value="telegram">Телеграм</option>
           </select>
-          <label class="visually-hidden" for="user_telephone"></label>
-          <input class="calculator__input input" type="tel" id="user_telephone" placeholder="+7 (___) - ___-__-__" required>
-          <p class="calculator__assent assent">Продолжая, вы принимаете согласие <a href="/">на сбор и обработку персональных данных</a></p>
+          <label class="visually-hidden" for="tel-2"></label>
+          <input class="calculator__input input" type="tel" id="tel-2" placeholder="+7 (___) - ___-__-__" required>
+          <p class="calculator__assent assent">Продолжая, вы принимаете согласие на<a href="/"> сбор и обработку персональных данных</a></p>
           <button class="calculator__button button" type="button">Оценить автомобиль</button>
         </div>
       </form>
@@ -753,6 +753,89 @@
           <img class="example__arrow--prev example__arrow arrow" src="./icons/arrow-blue.svg" alt="">
           <img class="example__arrow--next example__arrow arrow" src="./icons/arrow-blue.svg" alt="">
         </div>
+      </div>
+    </section>
+    <section class="cost container">
+      <h2 class="cost__title title">Оценка стоимости по фото/видео</h2>
+      <div class="cost__sub-titls-area">
+        <div class="cost__sub-title show-video active">Выберите видеоролик</div>
+        <div class="cost__sub-title show-photo">Выберите фотографию</div>
+      </div>
+      <div class="cost__video active video">
+        <ol class="video__numbers-list">
+          <li class="video__number-item">
+            <img src="./icons/cost/1.svg" alt="">
+            <p class="video__number-paragraph">Снимите видео на смартфоне или планшете</p>
+          </li>
+          <li class="video__number-item">
+            <img src="./icons/cost/2.svg" alt="">
+            <p class="video__number-paragraph">Расскажите об автомобиле: какого года выпуска, какой пробег и т.п.</p>
+          </li>
+          <li class="video__number-item">
+            <img src="./icons/cost/3.svg" alt="">
+            <p class="video__number-paragraph">Отправьте видео любым удобным для вас способом</p>
+          </li>
+        </ol>
+        <img class="video__image" src="images/video.jpg" alt="Машина">
+        <form class="video__main-form">
+          <label class="visually-hidden" for="model-3">Марка, модель, год выпуска</label>
+          <input class="video__input input" type="text" id="model-3" placeholder="Марка, модель, год выпуска" required>
+          <label class="video__file" for="video-1">Прикрепите видео</label>
+          <input type="file" id="video-1" name="video" accept="video/*" style="display: none;">
+          <label class="visually-hidden" for="user_connection-2">Выбрать тип связи</label>
+          <select class="video__select" name="user-connection" id="user_connection-2">
+            <option value="telephone">По телефону</option>
+            <option value="whats-app">Ватсап</option>
+            <option value="viber">Вайбер</option>
+            <option value="telegram">Телеграм</option>
+          </select>
+          <label class="visually-hidden" for="tel-3"></label>
+          <input class="video__input input" type="tel" id="tel-3" placeholder="+7 (___) - ___-__-__" required>
+          <p class="video__assent assent">Продолжая, вы принимаете согласие на<a href="/"> сбор и обработку персональных данных</a></p>
+          <button class="video__button button" type="submit">Оценить автомобиль</button>
+          <div>или отправьте нам в мессенджеры</div>
+          <ul class="video__messenger-box">
+            <li><img src="./icons/messenger/WhatsApp.svg" alt="WhatsApp"></li>
+            <li><img src="./icons/messenger/Viber.svg" alt="Viber"></li>
+            <li><img src="./icons/messenger/Telegram.svg" alt="Telegram"></li>
+          </ul>
+        </form>
+      </div>
+      <div class="cost__video photo">
+        <ol class="video__numbers-list">
+          <li class="video__number-item">
+            <img src="./icons/cost/1.svg" alt="">
+            <p class="video__number-paragraph">Снимите фотографии на смартфоне или планшете</p>
+          </li>
+          <li class="video__number-item">
+            <img src="./icons/cost/2.svg" alt="">
+            <p class="video__number-paragraph">Отправьте фотографии любым удобным для вас способом</p>
+          </li>
+        </ol>
+        <img class="video__image" src="images/photo.jpg" alt="Машина">
+        <form class="video__main-form">
+          <label class="visually-hidden" for="model-3">Марка, модель, год выпуска</label>
+          <input class="video__input input" type="text" id="model-3" placeholder="Марка, модель, год выпуска" required>
+          <label class="video__file" for="video-1">Прикрепите видео</label>
+          <input type="file" id="video-1" name="video" accept="video/*" style="display: none;">
+          <label class="visually-hidden" for="user_connection-2">Выбрать тип связи</label>
+          <select class="video__select" name="user-connection" id="user_connection-2">
+            <option value="telephone">По телефону</option>
+            <option value="whats-app">Ватсап</option>
+            <option value="viber">Вайбер</option>
+            <option value="telegram">Телеграм</option>
+          </select>
+          <label class="visually-hidden" for="tel-3"></label>
+          <input class="video__input input" type="tel" id="tel-3" placeholder="+7 (___) - ___-__-__" required>
+          <p class="video__assent assent">Продолжая, вы принимаете согласие на<a href="/"> сбор и обработку персональных данных</a></p>
+          <button class="video__button button" type="submit">Оценить автомобиль</button>
+          <div>или отправьте нам в мессенджеры</div>
+          <ul class="video__messenger-box">
+            <li><img src="./icons/messenger/WhatsApp.svg" alt="WhatsApp"></li>
+            <li><img src="./icons/messenger/Viber.svg" alt="Viber"></li>
+            <li><img src="./icons/messenger/Telegram.svg" alt="Telegram"></li>
+          </ul>
+        </form>
       </div>
     </section>
     <section class="location container">
