@@ -270,6 +270,10 @@ figure{
   padding-inline: 40px;
 }
 
+.social-img{
+  transition-duration: var(--transition-duration);
+}
+
 .input{
   width: 100%;
   border-radius: 5px;
@@ -876,6 +880,7 @@ body{
   cursor: pointer;
   margin-bottom: 15px;
   min-width: 340px;
+  transition-duration: var(--transition-duration);
 }
 
 .benefits__title.active{
@@ -1200,11 +1205,13 @@ body{
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
+  transition-duration: var(--transition-duration);
 }
 .cost__sub-title.active,
 .feedback__sub-title.active{
   color: var(--background-color-accent);
   text-decoration: underline;
+  transition-duration: var(--transition-duration);
 }
 
 .cost__video {
@@ -1307,6 +1314,7 @@ body{
   border: 1px solid #f4f7fa;
   border-radius: 10px;
   margin-bottom: 15px;
+  transition-duration: var(--transition-duration);
 }
 .question__item:last-child {
   margin-bottom: 0;
@@ -1514,6 +1522,78 @@ body{
   font-size: clamp(15px, 0.85vw, 17px);
   color: var(--color-dark);
   text-align: justify;
+}
+
+.footer{
+  background-color: var(--color-dark-alternate);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 60px;
+  margin: 0 auto;
+  color: var(--color-light);
+  padding-block: 60px;
+}
+
+.footer__columns-area{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.footer__main-column{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.footer__logo{
+  margin-bottom: 30px;
+}
+
+address{
+  font-style: normal;
+}
+
+.footer__button{
+  margin-top: 30px;
+  background-color: var(--background-color-accent);
+  max-width: 220px;
+}
+
+.footer__column-heading{
+  font-size: clamp(15px, 0.85vw, 17px);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.footer__column-item{
+  font-size: clamp(15px, 0.85vw, 17px);
+}
+
+.footer__column-item{
+  margin-bottom: 10px;
+}
+.footer__column-item:last-child{
+  margin-bottom: 0;
+}
+
+.footer__row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 90px;
+}
+
+.footer__row-item{
+  text-align: center;
+}
+
+.footer__row-item:last-child{
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1900px) {
@@ -1773,6 +1853,28 @@ body{
   .feedback__button{
     align-self: center;
     bottom: -30px;
+  }
+
+  .footer{
+    padding-block: 30px;
+  }
+
+  .footer__columns-area{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer__logo{
+    margin-bottom: 0;
+  }
+
+  .footer__button{
+    margin-top: 10px;
+  }
+
+  .footer__column-heading{
+    margin-bottom: 5px;
   }
 }
 
@@ -2062,22 +2164,70 @@ body{
   .feedback__content-video{
     width: 100%;
   }
+
+  .footer{
+    row-gap: 15px;
+  }
+
+  .footer__columns-area{
+    grid-template-rows: auto auto;
+  }
+
+  .footer__main-column{
+    grid-column: 1 / -1;
+    align-items: center;
+  }
+  
+  .footer__column:last-child{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (hover: hover) {
+  .button:hover{
+    background-color: var(--background-color-accent);
+  }
+  .heroes-action__button:hover,
+  .footer__button:hover{
+    background-color: var(--color-accent);
+  }
+  .social-img:hover{
+    scale: 1.15;
+  }
   .example__item:hover{
     border-color: var(--background-color-accent);
   }
   .example__arrow:hover{
     background-color: #d3d3d3;
   }
+  .cost__sub-title:hover,
+  .feedback__sub-title:hover{
+    color: var(--background-color-accent);
+  }
 }
 
 @media (hover: none) {
+  .button:active{
+    background-color: var(--background-color-accent);
+  }
+  .heroes-action__button:active,
+  .footer__button:active{
+    background-color: var(--color-accent);
+  }
+  .social-img:hover{
+    scale: 1.15;
+  }
   .example__item:active{
     border-color: var(--background-color-accent);
   }
   .example__arrow:active{
     background-color: #d3d3d3;
+  }
+  .cost__sub-title:hover,
+  .feedback__sub-title:active{
+    color: var(--background-color-accent);
   }
 }
