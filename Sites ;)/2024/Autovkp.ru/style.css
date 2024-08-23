@@ -983,7 +983,6 @@ body{
   line-height: 1.35;
   color: var(--color-light);
   margin-bottom: 10px;
-  white-space: nowrap;
 }
 .models__column-mark:last-child,
 .location__column-mark:last-child{
