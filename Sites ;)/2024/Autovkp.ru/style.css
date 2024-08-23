@@ -2196,6 +2196,9 @@ address{
   .social-img:hover{
     scale: 1.15;
   }
+  .benefits__title:hover{
+    background-color: var(--color-light);
+  }
   .example__item:hover{
     border-color: var(--background-color-accent);
   }
@@ -2218,6 +2221,9 @@ address{
   }
   .social-img:hover{
     scale: 1.15;
+  }
+  .benefits__title:active{
+    background-color: var(--color-light);
   }
   .example__item:active{
     border-color: var(--background-color-accent);
