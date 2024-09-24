@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('./fonts/SourceCodePro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('./fonts/SourceCodePro-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('./fonts/SourceCodePro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+  height:100%;width:100%;
+  font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;max-width:100%;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+a{color:inherit;}
+/*======= My setings =======*/
+button{background-color:transparent;}
+html,:has(:target){scroll-behavior: smooth;}
+body{min-height:100%;}
+svg * {transition-property:fill,stroke;}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+:root{
+  --color-dark: #202020;
+  --color-light: #ffffff;
+  --color-gray: #272727;
+  --color-button: #250f8a;
+  --background-button: #ffca00;
+  --background-section: #979797;
+  --radius-button: 25px;
+  --heigh-button: 50px;
+  --radius-button-alternative: 20px;
+  --heigh-button-alternative: 40px;
+  --height-header: 40px;
+  --width-container: 1200px;
+  --padding-container: 15px;
+}
+
+a, button, svg{
+  transition-duration: .2s linear;
+}
+
+body{
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  font-size: clamp(13px, .78vw, 15px);
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+.header {
+}
+.container {
+}
+.header__list {
+}
+.header__list-item {
+}
+.is-current {
+}
+.header__user-action {
+}
+.header__button-log {
+}
+.header__button-sign {
+}
