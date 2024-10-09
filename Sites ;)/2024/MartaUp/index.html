@@ -4,23 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>MartaUp</title>
+  <title>Marta Up</title>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <nav>
-        <img src='icons/logo.svg' width='164' height='37' loading='lazy' alt='MartaUp's logo'>
-        <ul class="header__list">
-          <li class="header__list-item is-current">home</li>
-          <li class="header__list-item">work</li>
-          <li class="header__list-item">about</li>
-          <li class="header__list-item">contact</li>
-        </ul>
-      </nav>
-      <div class="header__user-action">
-        <button class="header__button-log" type="button">Login</button>
-        <button class="header__button-sign" type="button">Sign Up</button>
+      <div class="header__inner">
+        <button class="burger-button" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="header__logo" href="/">
+          <picture>
+            <source
+            srcset="images/logo.webp"
+            type="image/webp"
+            >
+            <img src="images/logo.png" width="164" height="37" alt="MartaUp's logo">
+          </picture>
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a class="header__link is-current" href="/">home</a></li>
+            <li><a class="header__link" href="/">work</a></li>
+            <li><a class="header__link" href="/">about</a></li>
+            <li><a class="header__link" href="/">contact</a></li>
+          </ul>
+          <div class="header__user-actions">
+            <button class="header__button button header__button--in" type="button">login</button>
+            <button class="header__button button header__button--up" type="button">sign up</button>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
